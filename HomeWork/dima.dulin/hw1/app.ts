@@ -3,6 +3,8 @@ function error(message: string): never {
     throw new Error(message)
 }
 
+// SZ enum should has own file.
+// SZ also at this cource each property of enum should has value.
 enum MonthList{
 	January = 1,
 	February,
