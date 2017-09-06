@@ -19,13 +19,13 @@ describe('Readonly value mixin', () => {
   });
 
 
-  it('Can be constructed with default value', () => {
+  it('Can be constructed with the default value', () => {
     const myObject = new MyClassWithReadonlyValue();
 
     expect(myObject.value).toEqual('my value');
   });
 
-  it('Can be constructed with custom value', () => {
+  it('Can be constructed with a custom value', () => {
     const myValue = '42';
     const myObject = new MyClassWithReadonlyValue(myValue);
     

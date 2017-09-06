@@ -1,21 +1,21 @@
 import {} from 'jest';
 import DeletableValue from '../../mixin/DeletableValue';
 
-describe('Readonly mixin', () => {
+describe('Deletable value mixin', () => {
   class MyClass {
     value: string = 'my value';
   } 
 
   class MyClassWithDisposableValue extends DeletableValue(MyClass) {}
 
-  it('Should redefine declared value', () => {
+  it('Should redefine the declared value', () => {
     const myObject = new MyClassWithDisposableValue();
 
     expect(myObject.value).not.toEqual('my value');
     expect(myObject.value).toEqual('deleted');
   });
 
-  it('Should add `delete` method that make value "deleted"', () => {
+  it('Should add `delete` method that makes value "deleted"', () => {
     const myObject = new MyClassWithDisposableValue();
     
     myObject.value = 'My new value';

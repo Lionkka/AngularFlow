@@ -12,7 +12,7 @@ describe('Readonly value mixin', () => {
     }
   }
 
-  it('Should allow combine DeletableValue and DisposableValue mixin', () => {
+  it('Should allow to combine DeletableValue and DisposableValue mixin', () => {
     const myClass = DeletableValue(DisposableValue(MyClass));
     const myObject = new myClass();
 
@@ -22,7 +22,7 @@ describe('Readonly value mixin', () => {
     expect(myObject.value).toEqual('');
   });
 
-  it('Should allow combine with ReadonlyValue', () => {
+  it('Should allow to compose with ReadonlyValue', () => {
     const myClass = DeletableValue(DisposableValue(ReadonlyValue(MyClass)));
     const myObject = new myClass('my value');
 

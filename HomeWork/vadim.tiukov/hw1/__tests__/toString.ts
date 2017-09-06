@@ -58,7 +58,7 @@ describe('toString', () => {
     expect(string).toEqual('null')
   })
 
-  it('Should convert object with implemented toString method to string', () => {
+  it('Should convert an object with the implemented `toString` method to the string', () => {
     const object = {
       toString: (): string => 'Hello'
     }
