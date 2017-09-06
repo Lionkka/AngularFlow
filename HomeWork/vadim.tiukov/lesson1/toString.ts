@@ -1,4 +1,4 @@
-function toString(value): string {
+function toString(value: any): string {
   return String(value).toString()
 }
 

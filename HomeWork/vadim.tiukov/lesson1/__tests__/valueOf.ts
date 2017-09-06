@@ -11,18 +11,30 @@ describe('valueOf', () => {
   })
 
   it('Should value of boolean', () => {
-    const boolean: boolean = true
-    expect(valueOf(boolean)).toEqual(boolean)
+    const bool: boolean = true
+    const value: object = valueOf(bool)
+
+    expect(value).toEqual(bool)
+    expect(typeof value).toEqual('object')
+    expect(typeof bool).toEqual('boolean')
   })
 
   it('Should value of string', () => {
     const string: string = 'Hello'
-    expect(valueOf(string)).toEqual(string)
+    const value: object = valueOf(string)
+
+    expect(value).toEqual(string)
+    expect(typeof value).toEqual('object')
+    expect(typeof string).toEqual('string')
   })
 
   it('Should value of number', () => {
     const number: number = 2
-    expect(valueOf(number)).toEqual(number)
+    const value: object = valueOf(number)
+
+    expect(value).toEqual(number)
+    expect(typeof value).toEqual('object')
+    expect(typeof number).toEqual('number')
   })
 
   it('Should value of object', () => {
