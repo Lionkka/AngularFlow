@@ -1,6 +1,6 @@
 {
-  "files": [
-    "lesson1/index.ts"
+  "exclude": [
+    "node_modules"
   ],
   "compilerOptions": {
     "types": [
