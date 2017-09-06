@@ -1,0 +1,15 @@
+{
+  "files": [
+    "lesson1/index.ts"
+  ],
+  "compilerOptions": {
+    "types": [
+      "jest"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "watch": true,
+    "outDir": "./build"
+  }
+}
