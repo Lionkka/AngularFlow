@@ -1,3 +1,11 @@
+'use strict';
 /**
- * Created by didenko on 07.09.17.
+ * Implements to string method. Retrieve different type of object returns string
+ * @param entity
+ * @returns {string}
  */
+function myToString<T>(entity:T):string {
+    return entity.toString();
+}
+
+myToString<[number]>([1, 2, 3]);
