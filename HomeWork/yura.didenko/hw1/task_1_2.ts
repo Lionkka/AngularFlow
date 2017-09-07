@@ -1,5 +1,5 @@
 // SZ use of 'use strict' is strictly forbidden in es6 and typescript
-'use strict';
+// FIXED 
 /**
  *Implement override method that can retrieve day, month(as number as text format) and year and return Date object
  *Override this method for retrieve array of such parameters and retrieve array with dates.

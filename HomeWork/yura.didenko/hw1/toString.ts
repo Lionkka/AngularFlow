@@ -1,5 +1,5 @@
 // SZ use of 'use strict' is strictly forbidden in es6 and typescript
-'use strict';
+// FIXED
 /**
  * Implements to string method. Retrieve different type of object returns string
  * @param entity
