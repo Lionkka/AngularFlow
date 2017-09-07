@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "build",
+    "noEmitOnError": true,
+    "rootDir": ".",
+    "watch": true,
+    "removeComments": true,
+    "strict": true
+  },
+  "files": [
+    "./date.overload.ts",
+    "./to-string.generic.ts",
+    "./value-of.generic.ts"
+  ]
+}

@@ -52,7 +52,7 @@ describe('valueOf', () => {
     expect(valueOf(array)).toEqual(array)
   })
 
-  it('Should tuple of array', () => {
+  it('Should value of tuple', () => {
     const tuple: [number, string] = [1, 'string']
     expect(valueOf(tuple)).toEqual(tuple)
   })
@@ -62,7 +62,7 @@ describe('valueOf', () => {
     expect(valueOf(date)).toEqual(date)
   })
 
-  it('Should custom object of array', () => {
+  it('Should value of custom object', () => {
     const object: object = {
       valueOf: () => 123
     } 

@@ -2,8 +2,8 @@ import {} from 'jest'
 import createDate from '../overloading'
 
 
-describe('overloading', () => {
-  it('should create date where month is number', () => {
+describe('Overloading', () => {
+  it('Should create a date where the month is the number', () => {
     const day = 1;
     const month = 2;
     const year = 2014;
@@ -12,7 +12,7 @@ describe('overloading', () => {
     expect(date.toLocaleDateString()).toEqual(`${year}-${month}-${day}`)
   })
 
-  it('should create date where month is string', () => {
+  it('Should create a date where the month is the string', () => {
     const day = 1;
     const month = 'April';
     const year = 2014;
@@ -21,7 +21,7 @@ describe('overloading', () => {
     expect(date.toLocaleDateString()).toEqual(`${year}-4-${day}`)
   })
 
-  it('should create date from array', () => {
+  it('Should create a date from an array', () => {
     const day = 1;
     const month = 3;
     const year = 2014;
