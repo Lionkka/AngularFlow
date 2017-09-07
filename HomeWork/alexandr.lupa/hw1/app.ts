@@ -6,7 +6,7 @@ function overrideFunction(params: [number, string | number, number][]): Date[];
 
 // SZ missed type for args, should be array of any.
 // SZ type any is a hack, but it's ok to use it for this task. - NOT for rework.
-function overrideFunction(...args) {
+function overrideFunction(...args: any[]): Date | Date[] {
   const createDate = dateArgs => {
     if (typeof dateArgs[1] === 'string') {
       return new Date(`${dateArgs[1]} ${dateArgs[0]}, ${dateArgs[2]}`);
