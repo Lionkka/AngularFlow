@@ -4,22 +4,23 @@
 function overrideFunction(day: number, month: number | string, year: number): Date;
 function overrideFunction(params: [number, string | number, number][]): Date[];
 
-// SZ missed type for args, should be array of any.
+// FIXED // SZ missed type for args, should be array of any.
 // SZ type any is a hack, but it's ok to use it for this task. - NOT for rework.
 function overrideFunction(...args: any[]): Date | Date[] {
-  const createDate = dateArgs => {
-    if (typeof dateArgs[1] === 'string') {
-      return new Date(`${dateArgs[1]} ${dateArgs[0]}, ${dateArgs[2]}`);
+
+  const createDate = (day: number, month: number | string, year: number): Date => {
+    if (typeof month === 'string') {
+      return new Date(`${month} ${day}, ${year}`);
     }
 
-    return new Date(dateArgs[2], dateArgs[1], dateArgs[0]);
+    return new Date(year, month, day);
   };
 
   if (Array.isArray(args[0])) {
-    return args.map(dateArgs => createDate(dateArgs));
+    return args.map(dateArgs => createDate(dateArgs[0], dateArgs[1], dateArgs[2]));
   }
 
-  return createDate(args);
+  return createDate(args[0], args[1], args[2]);
 }
 
 overrideFunction(25, 7, 1994);
