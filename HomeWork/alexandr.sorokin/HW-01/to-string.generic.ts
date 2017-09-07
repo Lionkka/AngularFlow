@@ -3,7 +3,7 @@
  * Retrieve different type of object returns string
  * */
 function toCustomString<T>(parameter: T): string {
-    return String(parameter);
+    return parameter.toString();
 }
 
 console.log(toCustomString<number>(5));
