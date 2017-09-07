@@ -1,3 +1,4 @@
+// SZ use of 'use strict' is strictly forbidden in es6 and typescript
 'use strict';
 /**
  *Implement override method that can retrieve day, month(as number as text format) and year and return Date object
@@ -12,6 +13,9 @@ function getDate(dateConfig:[number,string] | [number]):Date[];
  * @param year
  * @returns {Date | Date[]}
  */
+
+// SZ you are able to use ...params: any[] here, type any is a hack in most cases but not here
+// SZ NOT for rework
 function getDate(dateConfig:number | [number,string] | [number], month?:number|string, year?:number):Date | Date[] {
 
     if (Array.isArray(dateConfig)) {
