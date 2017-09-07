@@ -1,11 +1,11 @@
-import Constructable from './Constructable';
+import Constructable from "./Constructable";
 
-export default function DisposableValue<BC extends Constructable>(Base: BC) {
-  return class extends Base {
-    value: string = '';
+export default function DisposableValue<BC extends Constructable>(base: BC) {
+  return class extends base {
+    public value: string = "";
 
-    dispose(): void {
-      this.value = ''
+    public dispose(): void {
+      this.value = "";
     }
-  }
+  };
 }

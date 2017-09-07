@@ -1,37 +1,39 @@
-import {} from 'jest';
-import ReadonlyValue from '../../mixin/ReadonlyValue';
-import DeletableValue from '../../mixin/DeletableValue';
-import DisposableValue from '../../mixin/DisposableValue';
+import {} from "jest";
 
-describe('Readonly value mixin', () => {
+import DeletableValue from "../../mixin/DeletableValue";
+import DisposableValue from "../../mixin/DisposableValue";
+import ReadonlyValue from "../../mixin/ReadonlyValue";
+
+describe("Readonly value mixin", () => {
   class MyClass {
-    value: string;
+    public value: string;
 
-    constructor(value: string = 'my value') {
+    constructor(value: string = "my value") {
       this.value = value;
     }
   }
 
-  it('Should allow to combine DeletableValue and DisposableValue mixin', () => {
+  it("Should allow to combine DeletableValue and DisposableValue mixin", () => {
     const myClass = DeletableValue(DisposableValue(MyClass));
     const myObject = new myClass();
 
-    expect(myObject.value).toEqual('deleted');
+    expect(myObject.value).toEqual("deleted");
 
     myObject.dispose();
-    expect(myObject.value).toEqual('');
+    expect(myObject.value).toEqual("");
   });
 
-  it('Should allow to compose with ReadonlyValue', () => {
+  it("Should allow to compose with ReadonlyValue", () => {
     const myClass = DeletableValue(DisposableValue(ReadonlyValue(MyClass)));
-    const myObject = new myClass('my value');
+    const myObject = new myClass("my value");
 
-    expect(myObject.value).toEqual('deleted');
+    expect(myObject.value).toEqual("deleted");
 
-    // myObject.value = 'new value' // It's not valid because of: [ts] Cannot assign to 'value' because it is a constant or a read-only property.
+    // It"s not valid because of: [ts] Cannot assign to "value" because it is a constant or a read-only property.
+    // myObject.value = "new value"
 
-    // But Typescript still allows you change 'value' property with mixin methods
+    // But Typescript still allows you change "value" property with mixin methods
     myObject.dispose();
-    expect(myObject.value).toEqual('');
+    expect(myObject.value).toEqual("");
   });
 });
