@@ -6,6 +6,8 @@ namespace hw1 {
     export function getDate(day: number, month: number | string, year: number): Date;
     export function getDate(params: Array<[number, number | string, number]>): Array<Date>;
 
+    // SZ you are able to use ...params: any[] here, type any is a hack in most cases but not here
+    // SZ NOT for rework
     export function getDate(params: number | Array<[number, number | string, number]>,
                             month?: number | string, year?: number): Date | Array<Date> {
         if (typeof params === 'number') {

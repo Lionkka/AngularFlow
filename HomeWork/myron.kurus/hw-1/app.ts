@@ -3,6 +3,8 @@ function generateDate(): Date;
 function generateDate(day: number, month: number | string, year: number): Date;
 function generateDate(day: [[number, number, number]]): Array<Date>;
 
+// SZ you are able to use ...params: any[] here, type any is a hack in most cases but not here
+// SZ NOT for rework
 function generateDate(day?: number | [[number, number| string, number]], month?: number | string, year?: number): Date | Array<Date> {
     if (!day) {
         return new Date();
