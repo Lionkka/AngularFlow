@@ -1,57 +1,32 @@
+import { MonthList } from './enums/MonthList'
 // Implement override method that can retrieve day, month(as number as text format) and year and return Date object
 function error(message: string): never {
     throw new Error(message)
 }
 
-// SZ enum should has own file.
-// SZ also at this cource each property of enum should has value.
-enum MonthList{
-	January = 1,
-	February,
-	March,
-	April,
-	May,
-	June,
-	July,
-	August,
-	September,
-	October,
-	November,
-	December
-}
-
-function generateDate(): Date;
-function generateDate(year: number): Date;
-function generateDate(year: number, month: string | number): Date;
-function generateDate(year: number, month: string | number, day: number): Date;
-function generateDate(year?: number, month?: string | number, day?: number): Date {
-    if (!year) {
-        return new Date()
-    } else if (year && !month) {
-        return new Date(year, 0, 1)
-    } else if (year && month && !day) {
-        return new Date(year, handleMonth(month), 1)
-    } else if (year && month && day) {
-        return new Date(year, handleMonth(month), day)
-    } else {
-        return error('Something failed')
-    }
-};
-
 function handleMonth(month: string | number): number {
     if (typeof month === 'string') {
-            return MonthList[month]
+        return MonthList[month]
     } else {
         return month
     }
 }
 
+function generateDate(year: number, month: string | number, day: number): Date;
+function generateDate(dateArray: [number, string | number, number]): Date [];
+function generateDate(...dateArray: any[]): any {
+    if (dateArray.length === 3) {
+        return new Date(dateArray[0], handleMonth(dateArray[1]), dateArray[2])
+    } else {
+        return [new Date(dateArray[0][0], handleMonth(dateArray[0][1]), dateArray[0][2])]
+    }
+};
+
 // test generateDate
-console.log(generateDate())
-console.log(generateDate(2012))
-console.log(generateDate(2013, 3))
 console.log(generateDate(2015, 2, 1))
 console.log(generateDate(2012, 'February', 5))
+console.log(generateDate([2012, 2, 5]))
+console.log(generateDate([2012, 'February', 5]))
 
 // Implements to string method. Retrieve different type of object returns string
 function customToString(data: string | number | boolean | object): string;
