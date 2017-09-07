@@ -1,12 +1,14 @@
 /*  Implement override method that can retrieve day, month(as number as text format) and year and return Date object
     Override this method for retrieve array of such parameters and retrieve array with dates. */
 
+// SZ classes, enums and interfaces should be implemented in separete file.
 interface ICustomDate {
     day: number;
     month: number | string;
     year: number;
 }
 
+// SZ At this course each property of enum should has a value.
 enum monthes {
     january, february, march, april, may, june, july, august, september, october, november, december
 } 
