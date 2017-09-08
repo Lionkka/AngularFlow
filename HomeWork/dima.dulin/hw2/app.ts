@@ -1,9 +1,7 @@
 // Implement generic for two way linked list for different items type.
 import { LinkedListNode } from './interfaces/LinkedListNode'
-
-function error(message: string): never {
-    throw new Error(message)
-}
+import applyMixins from './utils/applyMixins'
+import handleError from './utils/handleError'
 
 class LinkedList {
     private _length: number = 0;
@@ -15,7 +13,7 @@ class LinkedList {
     add(index:any, value:any):void {
 
         if (index < 0 || index >= this._length) {
-            return error('Out of bounds')
+            return handleError('Out of bounds')
         }
 
         let i = 0;
@@ -33,7 +31,7 @@ class LinkedList {
         this._tail = this._tail.prev
 
         if (this._length === 0) {
-            return error('No data structure')
+            return handleError('No data structure')
         }
 
         if (this._tail) {
@@ -56,7 +54,7 @@ class LinkedList {
         this._head = this._head.next
 
         if (this._length === 0) {
-            return error('No data structure')
+            return handleError('No data structure')
         }
 
         if (this._head) {
@@ -171,14 +169,6 @@ class MixinObject implements Disposable, Deletable, Readable {
 }
 
 applyMixins(MixinObject, [Disposable, Deletable, Readable]);
-
-function applyMixins(derivedCtor: any, baseCtors: any[]){
-    baseCtors.forEach(baseCtor => {
-        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
-            derivedCtor.prototype[name] = baseCtor.prototype[name];
-        });
-    });
-}
 
 const mixinObject = new MixinObject()
 mixinObject.delete()
