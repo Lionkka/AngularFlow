@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./build",
+    "noEmitOnError": true,
+    "experimentalDecorators": true
+  },
+  "files": [
+    "./list-hw2.ts"
+  ]
+}
