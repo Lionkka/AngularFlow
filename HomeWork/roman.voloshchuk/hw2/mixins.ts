@@ -50,6 +50,7 @@ class MixinTest implements Disposable, Deletable, ReadOnly {
 
 applyMixins(MixinTest, [Disposable, Deletable, ReadOnly]);
 
+
 let test = new MixinTest("hello");
 test.dispose();
 test.delete();
