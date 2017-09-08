@@ -1,4 +1,7 @@
 {
+  "exclude": [
+    "hw2/__tests__/jQueryCookie.d.ts"
+  ],
   "compilerOptions": {
     "types": [
       "jest"
