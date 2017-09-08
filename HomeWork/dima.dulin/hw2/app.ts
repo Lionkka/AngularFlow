@@ -175,3 +175,25 @@ mixinObject.delete()
 console.log(mixinObject.value)
 mixinObject.dispose()
 console.log(mixinObject.value)
+
+
+// Create three asynchronous(special for Anton/Alyona - invoke two async timeout in paralel when the first finish run third and when all finish console log 'Done!') timeout request to paralel. And When it all done log to console 'DONE!'(Use p)
+const customDelay = function(time: number):Promise<string> {
+    return new Promise<string>((resolve: (string) => void, reject: (string) => void) => {
+        setTimeout(():void => {
+            return resolve('Promise resolved!')
+        }, time * 1000)
+    });
+}
+
+function customAsync (): void {
+     const promiseFirst = customDelay(3)
+     const promiseSecond = customDelay(4)
+     const promiseThird = customDelay(5)
+
+     Promise.all([promiseFirst, promiseSecond, promiseThird]).then((values): void => {
+         console.log('DONE!')
+     })
+ }
+
+ customAsync()
