@@ -47,8 +47,4 @@ Promise.all([
 ])
 .then(() => {
   console.log('DONE!');
-})
-
-
-
-
+});
