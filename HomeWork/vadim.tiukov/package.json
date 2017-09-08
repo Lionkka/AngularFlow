@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "pretest": "tslint -c tslint.json -e './node_modules/**' './**/*.{ts,tsx}'",
-    "test": "jest",
+    "pretest2": "tslint -c tslint.json -e './node_modules/**' './**/*.{ts,tsx}'",
+    "test": "jest ",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
@@ -12,6 +12,9 @@
     "typescript": "^2.5.2"
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "build"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",

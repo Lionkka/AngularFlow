@@ -3,6 +3,9 @@
     "types": [
       "jest"
     ],
+    "lib": [
+      "es6"
+    ],
     "target": "es5",
     "module": "commonjs",
     "strict": true,
