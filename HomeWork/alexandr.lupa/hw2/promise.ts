@@ -25,7 +25,7 @@ function getThirdPromise(): Promise<Date> {
 }
 
 
-// first part
+// general part
 Promise.all([
   getFirstPromise(),
   getSecondPromise(),
