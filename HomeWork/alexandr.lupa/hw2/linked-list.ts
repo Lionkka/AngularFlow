@@ -1,0 +1,1 @@
+// Implement generic for two way linked list for different items type.

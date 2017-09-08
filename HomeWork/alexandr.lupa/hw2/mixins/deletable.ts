@@ -1,7 +1,7 @@
 export class Deletable {
-  public isDeleted: boolean;
+  public _value: string;
 
   public delete(): void {
-    this.isDeleted = true;
+    this._value = 'delete';
   }
 }

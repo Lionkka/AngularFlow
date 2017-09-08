@@ -1,7 +1,8 @@
 export class Readable {
+  public _value: string;
   public isReadOnly: boolean;
 
-  readonly(): void {
-    this.isReadOnly = false;
+  public readonly(): void {
+    this.isReadOnly = true;
   }
 }
