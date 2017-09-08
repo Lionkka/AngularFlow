@@ -1,0 +1,49 @@
+// Create three asynchronous(special for Anton/Alyona - invoke two async timeout in paralel when the first finish run third and when all finish console log 'Done!') timeout request to paralel. And When it all done log to console 'DONE!'(Use p)
+
+function getFirstPromise(): Promise<string> {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('first promise');
+    }, 1000);
+  });
+}
+
+function getSecondPromise(): Promise<number> {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(1000);
+    }, 3000);
+  });
+}
+
+function getThirdPromise(): Promise<Date> {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(new Date());
+    }, 2000);
+  });
+}
+
+
+// first part
+Promise.all([
+  getFirstPromise(),
+  getSecondPromise(),
+  getThirdPromise()
+])
+.then(res => {
+  console.log('DONE!');
+});
+
+// special part
+Promise.all([
+  getFirstPromise().then(() => getSecondPromise().then(res => { console.log('Done!') })),
+  getThirdPromise()
+])
+.then(() => {
+  console.log('DONE!');
+})
+
+
+
+
