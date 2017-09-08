@@ -1,7 +1,7 @@
 {
   "scripts": {
     "pretest2": "tslint -c tslint.json -e './node_modules/**' './**/*.{ts,tsx}'",
-    "test": "jest ",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
@@ -23,7 +23,10 @@
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "testRegex": "\\/__tests__\\/((?!\\.d\\.).)*\\.(ts|tsx|js)$",
     "verbose": true
+  },
+  "dependencies": {
+    "jquery.cookie": "^1.4.1"
   }
 }
