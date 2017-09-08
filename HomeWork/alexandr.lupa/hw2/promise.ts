@@ -37,7 +37,12 @@ Promise.all([
 
 // special part
 Promise.all([
-  getFirstPromise().then(() => getThirdPromise().then(res => { console.log('Done!') })),
+  getFirstPromise().then(res1 => {
+    return getThirdPromise().then(res2 => {
+      console.log('Done!');
+      return [res1, res2];
+    });
+  }),
   getSecondPromise()
 ])
 .then(() => {
