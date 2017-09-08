@@ -4,29 +4,14 @@ import { applyMixins } from './utilites/apply-mixins';
 import { Disposable, Deletable, Readable } from './mixins/index';
 
 class Value implements Disposable, Deletable, Readable {
-  private _value: string = '';
+  public _value: string = '';
+  public isReadOnly: boolean = true;
 
-  // Disposable
-  public isDisposed: boolean = false;
   public dispose: () => void;
-
-  // Deletable
-  public isDeleted: boolean = false;
   public delete: () => void;
-
-  // Readable
-  public isReadOnly: boolean = false;
   public readonly: () => void;
 
   public get value(): string {
-    if (this.isDeleted) {
-      return 'deleted';
-    }
-
-    if (this.isDisposed) {
-      return '';
-    }
-
     return this._value;
   }
 

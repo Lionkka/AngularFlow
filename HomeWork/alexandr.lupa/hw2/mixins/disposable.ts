@@ -1,7 +1,7 @@
 export class Disposable {
-  public isDisposed: boolean;
+  public _value: string;
 
   public dispose(): void {
-    this.isDisposed = true;
+    this._value = '';
   }
 }
