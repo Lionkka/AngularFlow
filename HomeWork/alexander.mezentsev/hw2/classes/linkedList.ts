@@ -1,4 +1,3 @@
-
 import { LinkedListNode } from './linkedListNode'
 
 export class LinkedList {
@@ -22,7 +21,7 @@ export class LinkedList {
     };
 
     public addFirst<T>(element: T): void {   
-        let tmpNode = new LinkedListNode<T>(element, this.head, null);
+        let tmpNode: LinkedListNode<T> = new LinkedListNode<T>(element, this.head, null);
         if(this.head !== null ) {
             this.head.prev = tmpNode;
         }
@@ -35,7 +34,7 @@ export class LinkedList {
     };
 
     public addLast<T>(element: T): void {
-       let tmpNode = new LinkedListNode<T>(element, null, this.tail);        
+       let tmpNode: LinkedListNode<T> = new LinkedListNode<T>(element, null, this.tail);        
        if(this.tail !== null) {
            this.tail.next = tmpNode;
         }
@@ -48,13 +47,13 @@ export class LinkedList {
     };
 
     public addAfter<T>(data: T, prevNodeIndex: number): LinkedListNode<T>{
-        let prevNode = this.getNodeByIndex(prevNodeIndex);
+        let prevNode: LinkedListNode<any> = this.getNodeByIndex(prevNodeIndex);
         if(prevNode === this.tail) {
             this.addFirst<T>(data);
         } else {
             console.log("Adding node after "+ prevNode.data);
-            let newNode = new LinkedListNode<T>(data);
-            let nextNode = prevNode.next;
+            let newNode: LinkedListNode<T> = new LinkedListNode<T>(data);
+            let nextNode: LinkedListNode<any> = prevNode.next;
             newNode.next = nextNode;
             prevNode.next = newNode;
             nextNode.prev = newNode;
@@ -73,7 +72,7 @@ export class LinkedList {
             console.log('Index is out of range. List size: ' + this.size);
             return;
         }
-        let tmpNode = this.head;
+        let tmpNode: LinkedListNode<any> = this.head;
         while((index - 1) >= 0){
             tmpNode = tmpNode.next;            
             index--;
@@ -83,7 +82,7 @@ export class LinkedList {
 
     public iterateForward(): void {
         console.log("iterating forward...");
-        let tmpNode = this.head;
+        let tmpNode: LinkedListNode<any> = this.head;
         while(tmpNode !== null) {
             console.log(tmpNode.data);
             tmpNode = tmpNode.next;
@@ -92,7 +91,7 @@ export class LinkedList {
 
     public iterateBackward(): void {
         console.log("iterating backward...");
-        let tmpNode = this.tail;
+        let tmpNode: LinkedListNode<any> = this.tail;
         while(tmpNode !== null) {
             console.log(tmpNode.data);
             tmpNode = tmpNode.prev;
@@ -104,7 +103,7 @@ export class LinkedList {
             console.log('List is empty');
             return;
         }
-        let tmpNode = this.head;
+        let tmpNode: LinkedListNode<any> = this.head;
         this.head = this.head.next;
         this.head.prev = null;
         this._size--;
@@ -117,7 +116,7 @@ export class LinkedList {
             console.log('List is empty');
             return;
         }
-        let tmpNode = this.tail;
+        let tmpNode: LinkedListNode<any> = this.tail;
         this.tail = this.tail.prev;
         this.tail.next = null;
         this._size--;
