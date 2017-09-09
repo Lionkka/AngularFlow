@@ -4,7 +4,7 @@ import DeletableValue from "../../mixin/DeletableValue";
 import DisposableValue from "../../mixin/DisposableValue";
 import ReadonlyValue from "../../mixin/ReadonlyValue";
 
-describe("Readonly value mixin", () => {
+describe("My class", () => {
   class MyClass {
     public value: string;
 
@@ -13,7 +13,7 @@ describe("Readonly value mixin", () => {
     }
   }
 
-  it("Should allow to combine DeletableValue and DisposableValue mixin", () => {
+  it("should be combined with DeletableValue and DisposableValue mixin", () => {
     const myClass = DeletableValue(DisposableValue(MyClass));
     const myObject = new myClass();
 
@@ -23,7 +23,7 @@ describe("Readonly value mixin", () => {
     expect(myObject.value).toEqual("");
   });
 
-  it("Should allow to compose with ReadonlyValue", () => {
+  it("should be composed with ReadonlyValue", () => {
     const myClass = DeletableValue(DisposableValue(ReadonlyValue(MyClass)));
     const myObject = new myClass("my value");
 
