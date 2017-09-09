@@ -1,7 +1,14 @@
 {
+  "exclude": [
+    "hw2/__tests__/jQueryCookie.d.ts"
+  ],
   "compilerOptions": {
     "types": [
-      "jest"
+      "jest",
+      "node"
+    ],
+    "lib": [
+      "es6"
     ],
     "target": "es5",
     "module": "commonjs",

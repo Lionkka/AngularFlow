@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true
   },
   "files": [
-    "./app.ts"
+    "./mixins.ts",
+    "./linked-list.ts"
   ]
 }

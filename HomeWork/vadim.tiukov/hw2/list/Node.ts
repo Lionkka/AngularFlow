@@ -1,8 +1,8 @@
 export default class Node<T> {
     public data: T;
-    private _next: Node<any>;
+    private _next: Node<T>;
 
-    set next(next: Node<any>) {
+    set next(next: Node<T>) {
       if (next === this) {
         throw new Error("Circular Reference");
       }
@@ -10,7 +10,7 @@ export default class Node<T> {
       this._next = next;
     }
 
-    get next(): Node<any> {
+    get next(): Node<T> {
       return this._next;
     }
 }

@@ -9,7 +9,9 @@
             true,
             "check-format",
             "allow-leading-underscore"
-        ]
+        ],
+        "interface-name": [true, "never-prefix"],
+        "no-namespace": [true, "allow-declarations"]
     },
     "rulesDirectory": []
 }
