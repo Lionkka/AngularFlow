@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "pretest2": "tslint -c tslint.json -e './node_modules/**' './**/*.{ts,tsx}'",
+    "pretest": "tslint -c tslint.json -e './node_modules/**' './**/*.{ts,tsx}'",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -7,20 +7,19 @@ declare namespace jquery {
     raw?: boolean;
     json?: boolean;
   }
-  
+
   interface CookiesOptions {
     expires?: number | Date;
     path?: string;
     domain?: string;
     secure?: boolean;
   }
-  
+
   export interface JQueryStatic extends CookiesConfiguration {
     cookie(key: string, value?: any, options?: CookiesOptions): any|void;
     removeCookie(key: string, options?: CookiesOptions): boolean;
   }
 }
-
 
 declare const jquery: jquery.JQueryStatic;
 
