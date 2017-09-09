@@ -5,16 +5,16 @@ describe("Multiple async calls", () => {
   it("should pass when all resolved", (done) => {
     const expectedResult: [number, number, string] = [1, 2, "my string"];
 
-    const promise1: Promise<number> = timeout((callback) => {
-      callback(undefined, expectedResult[0]);
+    const promise1: Promise<number> = timeout(() => {
+      return expectedResult[0];
     });
 
-    const promise2: Promise<number> = timeout((callback) => {
-      callback(undefined, expectedResult[1]);
+    const promise2: Promise<number> = timeout(() => {
+      return expectedResult[1];
     });
 
-    const promise3: Promise<string> = timeout((callback) => {
-      callback(undefined, expectedResult[2]);
+    const promise3: Promise<string> = timeout(() => {
+      return expectedResult[2];
     });
 
     Promise.all([promise1, promise2, promise3]).then((res) => {
@@ -26,16 +26,16 @@ describe("Multiple async calls", () => {
   it("should catch when some promise was rejected", (done) => {
     const error = Error("Failed in the middle");
 
-    const promise1 = timeout((callback) => {
-      callback(undefined, 1);
+    const promise1: Promise<number> = timeout(() => {
+      return 1;
     }, 100);
 
-    const promise2 = timeout((callback) => {
-      callback(error, 2);
+    const promise2: Promise<number> = timeout(() => {
+      throw error;
     }, 200);
 
-    const promise3 = timeout((callback) => {
-      callback(undefined, 3);
+    const promise3: Promise<number> = timeout(() => {
+      return 3;
     }, 300);
 
     Promise.all([promise1, promise2, promise3]).catch((err) => {
@@ -49,16 +49,16 @@ describe("Multiple async calls", () => {
     const secondPromiseResult: string = "my string";
     const thirdPromiseResult: object = {};
 
-    const promise1 = timeout((callback) => {
-      callback(undefined, firstPromiseResult);
+    const promise1: Promise<number> = timeout(() => {
+      return firstPromiseResult;
     }, 1);
 
-    const promise2 = timeout((callback) => {
-      callback(undefined, secondPromiseResult);
+    const promise2: Promise<string> = timeout(() => {
+      return secondPromiseResult;
     }, 20);
 
-    const promise3 = timeout((callback) => {
-      callback(undefined, thirdPromiseResult);
+    const promise3: Promise<object> = timeout(() => {
+      return thirdPromiseResult;
     }, 3);
 
     Promise.all([promise1, promise2, promise3]).then((res) => {
