@@ -4,8 +4,8 @@
  */
 
 function createPromise(value: string): Promise<string>{
-    return new Promise<string>(function (resolve, reject): void{
-        setTimeout(function (): void{
+    return new Promise<string>(function (resolve: (string) => void, reject: (string) => void): void{
+        setTimeout((): void => {
             resolve(value);
         },  1000);
     });
