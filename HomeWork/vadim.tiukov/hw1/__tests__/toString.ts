@@ -1,70 +1,69 @@
-import {} from 'jest'
-import toString from '../toString'
+import {} from "jest";
+import toString from "../toString";
 
-describe('toString', () => {
-  it('Should convert undefined to string', () => {
-    const variable: undefined = undefined
-    const string: string = toString(variable)
+describe("toString", () => {
+  it("Should convert undefined to string", () => {
+    const variable: undefined = undefined;
+    const myString: string = toString(variable);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('undefined')
-  })
+    expect(typeof myString).toEqual("string");
+    expect(myString).toEqual("undefined");
+  });
 
-  it('Should convert number to string', () => {
-    const number: number = 1
-    const string: string = toString(number)
+  it("Should convert number to string", () => {
+    const num: number = 1;
+    const str: string = toString(num);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('1')
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual("1");
+  });
 
-  it('Should convert boolean to string', () => {
-    const boolean: boolean = false
-    const string: string = toString(boolean)
+  it("Should convert boolean to string", () => {
+    const bool: boolean = false;
+    const str: string = toString(bool);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('false')
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual("false");
+  });
 
-  it('Should convert tuple to string', () => {
-    const tuple: [number, string] = [1, 'string']
-    const string = toString(tuple)
+  it("Should convert tuple to string", () => {
+    const tuple: [number, string] = [1, "string"];
+    const str = toString(tuple);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual(tuple.toString())
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual(tuple.toString());
+  });
 
-  it('Should convert array to string', () => {
-    const array: Array<string> = ['string1', 'string2']
-    const string = toString(array)
+  it("Should convert array to string", () => {
+    const array: string[] = ["string1", "string2"];
+    const str = toString(array);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual(array.toString())
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual(array.toString());
+  });
 
-
-  it('Should convert enum to string', () => {
+  it("Should convert enum to string", () => {
     enum Color {Red, Green, Blue}
-    const string = toString(Color)
+    const str = toString(Color);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('[object Object]')
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual("[object Object]");
+  });
 
-  it('Should convert null to string', () => {
-    const string = toString(null)
+  it("Should convert null to string", () => {
+    const str = toString(null);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('null')
-  })
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual("null");
+  });
 
-  it('Should convert an object with the implemented `toString` method to the string', () => {
-    const object = {
-      toString: (): string => 'Hello'
-    }
-    const string = toString(object)
+  it("Should convert an object with the implemented `toString` method to the string", () => {
+    const obj = {
+      toString: (): string => "Hello",
+    };
+    const str = toString(obj);
 
-    expect(typeof string).toEqual('string')
-    expect(string).toEqual('Hello')
-  })
-})
+    expect(typeof str).toEqual("string");
+    expect(str).toEqual("Hello");
+  });
+});

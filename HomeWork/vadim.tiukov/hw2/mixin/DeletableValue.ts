@@ -1,11 +1,11 @@
-import Constructable from './Constructable'
+import Constructable from "./Constructable";
 
-export default function DeletableValue<BC extends Constructable>(Base: BC) {
-  return class extends Base {
-    value: string = 'deleted';
+export default function DeletableValue<BC extends Constructable>(base: BC) {
+  return class extends base {
+    public value: string = "deleted";
 
-    delete(): void {
-      this.value = 'deleted';
+    public delete(): void {
+      this.value = "deleted";
     }
-  }
+  };
 }

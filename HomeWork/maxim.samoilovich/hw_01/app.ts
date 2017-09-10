@@ -59,7 +59,119 @@ for(let i = 0; i < third_call.length; i++) {
     console.log(third_call[i]);
 }
 
-/*  Implements to string method. Retrieve different type of object returns string
-    Implements valueOf method. Retrieve different type of objects returns true/false. */
+/*  Implements to string method. Retrieve different type of object returns string */
 
-/* It's nothing here yet */
+function getPrimitiveS(primitive: number | string | boolean | null | undefined): string { // also 'function'
+    if(typeof primitive === 'undefined') {
+        return 'undefined';
+    }
+    if(primitive === null) {
+        return 'null';
+    }
+    return primitive.toString();
+}
+
+function customToString(obj: object): string {
+    let result: string = '';
+    if (typeof obj === 'object' && obj !== null) {
+        for(let key in obj) {
+            result += `${key}: `
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                result += `{`
+                result += customToString(obj[key]);
+                result += '}, ';
+            } else {
+                result += getPrimitiveS(obj[key]);
+                result += ', ';
+            }
+        }
+    } else {
+        result = 'null';
+        result += ', ';
+    }
+    return result;
+}
+
+// check
+console.log('-------');
+
+let someObject: object = {
+    sleep: false,
+    shave: (): void => {
+        let cheeck = 'sleek';
+    },
+    wisdom: {
+        forehead: 7,
+        humour: 'black',
+        incontinence: undefined,
+        test: null
+    }
+};
+
+console.log(customToString(someObject));
+
+class A {
+    public a: number;
+    private b: string;
+    protected c: boolean;
+
+    constructor(a: number, b:string, c: boolean) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+}
+
+console.log(customToString(A));
+
+let a = new A(1, '2', true);
+
+console.log(customToString(a));
+
+/*  Implements valueOf method. Retrieve different type of objects returns true/false. */
+
+function getPrimitiveV(primitive: number | string | boolean | null | undefined): number { // also 'function'
+    if(typeof primitive === 'number' || typeof primitive === 'boolean') {
+        return Number(primitive.valueOf());
+    }
+    if(typeof primitive === 'string') {
+        if(!isNaN(Number(primitive.valueOf()))) {
+            return Number(primitive.valueOf());
+        } else {
+            return 1;
+        }
+    }
+    if(typeof primitive === 'undefined') {
+        return 0;
+    }
+    if(primitive === null) {
+        return 0;
+    }
+    if(typeof primitive === 'function') {
+        return 1;
+    }
+}
+
+function customToValue(obj: object): number {
+    let result: number = 0;
+    if (typeof obj === 'object' && obj !== null) {
+        for(let key in obj) {
+            if (typeof obj[key] === 'object') {
+                result += customToValue(obj[key]);
+            } else {
+                result += getPrimitiveV(obj[key]);
+            }
+        }
+    } else {
+        result = 0;
+    }
+    return result;
+}
+
+// check
+console.log('-------');
+console.log(customToValue(someObject));
+
+console.log(customToValue(A));
+
+console.log(customToValue(a));
