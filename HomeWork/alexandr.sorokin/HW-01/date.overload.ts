@@ -23,7 +23,7 @@ function genericCustomDate(...args:any[]): Date[] | Date {
 
 function createDate(day: number, month: number | string, year: number): Date {
     if (typeof month == 'number') {
-        return new Date(year, month, day);
+        return new Date(year, month - 1, day);
     }
 
     return new Date(`${year} ${month} ${day}`);
