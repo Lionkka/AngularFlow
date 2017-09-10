@@ -1,6 +1,5 @@
 // Implement generic for two way linked list for different items type.
 import { LinkedListNode } from './interfaces/LinkedListNode'
-import applyMixins from './utils/applyMixins'
 import handleError from './utils/handleError'
 
 class LinkedList {
@@ -13,7 +12,7 @@ class LinkedList {
     add(index:any, value:any):void {
 
         if (index < 0 || index >= this._length) {
-            return handleError('Out of bounds')
+            handleError('Out of bounds')
         }
 
         let i = 0;
@@ -31,7 +30,7 @@ class LinkedList {
         this._tail = this._tail.prev
 
         if (this._length === 0) {
-            return handleError('No data structure')
+            handleError('No data structure')
         }
 
         if (this._tail) {
@@ -54,7 +53,7 @@ class LinkedList {
         this._head = this._head.next
 
         if (this._length === 0) {
-            return handleError('No data structure')
+            handleError('No data structure')
         }
 
         if (this._head) {
@@ -116,84 +115,23 @@ class LinkedList {
     }
 }
 
-const list = new LinkedList()
+export default LinkedList
+
+// const list = new LinkedList()
 
 // test LinkedList
 
-list.push(1)
-list.push(2)
-list.push(3)
-list.push(4)
-console.log(list.toString())
-console.log(JSON.stringify(list.toArray()))
-
-list.add(1, 1)
-list.add(2, 2)
-list.pop()
-list.shift()
-list.unshift(1)
-console.log(list.toString())
-console.log(JSON.stringify(list.toArray()))
-
-
-// Implement Mixin for Disposable, Deletable, Readable {isReadOnly}. Class should contains property value: string. If Dispose it should be equals ''. If delete is should be equals 'deleted'. Id readonly it can't be changed.
-
-// Disposable Mixin
-class Disposable {
-    value: string = ''
-    dispose(): void {
-      this.value = ''
-    }
-}
-
-// Deletable Mixin
-class Deletable {
-    value: string = ''
-    delete(): void {
-      this.value = 'deleted'
-    }
-}
-
-// Readable Mixin
-class Readable {
-    readonly value: string
-}
-
-class MixinObject implements Disposable, Deletable, Readable {
-    value: string
-    constructor(){
-        console.log('Created MixinObject')
-    }
-    dispose: () => void
-    delete: () => void
-}
-
-applyMixins(MixinObject, [Disposable, Deletable, Readable]);
-
-const mixinObject = new MixinObject()
-mixinObject.delete()
-console.log(mixinObject.value)
-mixinObject.dispose()
-console.log(mixinObject.value)
-
-
-// Create three asynchronous(special for Anton/Alyona - invoke two async timeout in paralel when the first finish run third and when all finish console log 'Done!') timeout request to paralel. And When it all done log to console 'DONE!'(Use p)
-const customDelay = function(time: number):Promise<string> {
-    return new Promise<string>((resolve: (string) => void, reject: (string) => void) => {
-        setTimeout(():void => {
-            return resolve('Promise resolved!')
-        }, time * 1000)
-    });
-}
-
-function customAsync (): void {
-     const promiseFirst = customDelay(3)
-     const promiseSecond = customDelay(4)
-     const promiseThird = customDelay(5)
-
-     Promise.all([promiseFirst, promiseSecond, promiseThird]).then((values): void => {
-         console.log('DONE!')
-     })
- }
-
- customAsync()
+// list.push(1)
+// list.push(2)
+// list.push(3)
+// list.push(4)
+// console.log(list.toString())
+// console.log(JSON.stringify(list.toArray()))
+//
+// list.add(1, 1)
+// list.add(2, 2)
+// list.pop()
+// list.shift()
+// list.unshift(1)
+// console.log(list.toString())
+// console.log(JSON.stringify(list.toArray()))

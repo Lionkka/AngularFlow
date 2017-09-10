@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
-    "outDir": "./build",
-    "noEmitOnError": true,
-    "watch": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "outDir": "./build",
+    "rootDir": "src",
+    "watch": true
   },
-  "files": [
-    "./app.ts"
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
