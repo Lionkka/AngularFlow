@@ -2,6 +2,8 @@
 import { LinkedListNode } from './interfaces/LinkedListNode'
 import handleError from './utils/handleError'
 
+// SZ you should use generic types, any is forbidden
+
 class LinkedList {
     private _length: number = 0;
     private _key: number = 0;
