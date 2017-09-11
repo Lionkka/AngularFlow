@@ -1,0 +1,46 @@
+{
+  "name": "03.Testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/test/.*\\.(ts|tsx|js)$",
+    "coverageReporters": [
+      "html"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "src/**/*.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/jest": "^20.0.8",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "jest": "^21.0.2",
+    "mocha": "^3.5.0",
+    "ts-jest": "^21.0.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2",
+    "typings": "^2.1.1"
+  },
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
