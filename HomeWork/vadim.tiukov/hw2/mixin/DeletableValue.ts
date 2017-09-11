@@ -1,6 +1,6 @@
 import Constructable from "./Constructable";
 
-export default function DeletableValue<BC extends Constructable>(base: BC) {
+export function DeletableValue<BC extends Constructable>(base: BC) {
   return class extends base {
     public value: string = "deleted";
 
