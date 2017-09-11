@@ -7,6 +7,8 @@ function RunInParalell() {
     const promise2 = Run<number>(4, 344);
     const promise3 = Run<string>(5, 'promise 2');
 
+    // SZ you didn't understand task right.
+    // SZ next promise you should starts only when previous is finished.
 
     Promise.all([promise1, promise2, promise3]).then( (values) => console.log('DONE!'))
 }

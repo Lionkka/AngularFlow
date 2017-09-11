@@ -4,6 +4,8 @@
     private _y: number;
 
     constructor(x: number, y: number, radius: number) {
+        // SZ method and properties names should start from lower case character
+        // SZ underscore is ok for private methods and properties. NOT for rework.
         this.Radius = radius;
         this.Y = y;
         this.X = x;

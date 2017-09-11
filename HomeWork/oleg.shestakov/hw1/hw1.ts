@@ -3,7 +3,16 @@ type DateFormat = {day: number, month: number | string, year: number}; // maybe 
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+// SZ only classes and interfaces should start from upper case character
 let GetMonth = (month: string, months: string[]) => months.indexOf(month);
+
+// SZ you need to implement something like this
+// function getDate(dates: DateFormat[]);
+// function getDate(format: DateFormat);
+// SZ type any is ok for this task
+// function getDate(...params: any[]) {
+//     ...
+// }
 
 function getDate(format: DateFormat): Date {
     let day = format.day;
@@ -21,6 +30,7 @@ function getDate(format: DateFormat): Date {
 
     return new Date(year, month, day);
 }
+
 
 function getDates(formats: DateFormat[]) : Date[] {
     return formats.map(getDate);

@@ -1,5 +1,7 @@
 ﻿import { Leaf } from './Leaf';
 
+// SZ methods names should start from lower case character. NOT for rework.
+
 export class LinkedList<TEntity> {
     private _head: Leaf<TEntity> = null;
     private _length: number = 0;
