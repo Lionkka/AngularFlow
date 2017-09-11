@@ -36,35 +36,35 @@ Implement generic for two way linked list for different items type.
 
 import { LinkedList } from './classes/linkedList'
 
-const myDoubleLinkedList: LinkedList = new LinkedList();
-myDoubleLinkedList.addFirst('test');
-//adding: test
-myDoubleLinkedList.addLast(2);
-//adding: 2
+const myDoubleLinkedList: LinkedList<string> = new LinkedList();
+myDoubleLinkedList.addFirst('test1');
+//adding: test1
+myDoubleLinkedList.addLast('test2');
+//adding: test2
 myDoubleLinkedList.iterateForward();
 //iterating forward...
-//test
-//2
-myDoubleLinkedList.addLast(new Date());
-//adding: Thu Sep 07 2017 22:30:43 GMT+0300 (EEST)
+//test1
+//test2
+myDoubleLinkedList.addLast('test3');
+//adding: test3
 myDoubleLinkedList.iterateBackward();
 //iterating backward...
-//Date 2017-09-07T19:30:43.979Z
-//2
-//test
-myDoubleLinkedList.addAfter(3, 1);
-//Adding node after 2
-myDoubleLinkedList.addAfter('test2', 0);
-//Adding node after test
+//test3
+//test2
+//test1
+myDoubleLinkedList.addAfter('test2.1', 1);
+//Adding node (test2.1) after test2
+myDoubleLinkedList.addAfter('test1.1', 0);
+//Adding node (test1.1) after test1
 myDoubleLinkedList.iterateForward();
 //iterating forward... 
-//test 
+//test1
+//test1.1
 //test2 
-//2 
-//3 
-//Date 2017-09-07T19:45:39.931Z
+//test2.2
+//test3
 console.log("Element by index 2:", myDoubleLinkedList.getElementByIndex(2));
-//Element by index 2: 2
+//Element by index 2: test2
 
 /*
 Create d.ts file for jQueryCookie library
