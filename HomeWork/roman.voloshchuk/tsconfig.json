@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
+    "target": "es6",                          
+    "module": "commonjs",                 
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "outDir": "./build",
-    "sourceMap": true,
-    "watch": true,
-    "rootDirs": ["./src"]
+    "rootDir": "src",
+    "watch": true
   },
+  "include": [
+    "./src/**/*.ts"
+  ],
   "exclude": [
-      "node_modules",
-      "**/*.test.ts"
+    "node_modules"
   ]
 }
-
