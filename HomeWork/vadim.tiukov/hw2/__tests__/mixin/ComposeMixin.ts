@@ -1,8 +1,6 @@
 import {} from "jest";
 
-import DeletableValue from "../../mixin/DeletableValue";
-import DisposableValue from "../../mixin/DisposableValue";
-import ReadonlyValue from "../../mixin/ReadonlyValue";
+import { DeletableValue, DisposableValue, ReadonlyValue } from "../../mixins";
 
 describe("My class", () => {
   class MyClass {

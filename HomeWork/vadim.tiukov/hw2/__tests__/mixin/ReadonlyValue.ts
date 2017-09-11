@@ -1,5 +1,5 @@
 import {} from "jest";
-import ReadonlyValue from "../../mixin/ReadonlyValue";
+import { ReadonlyValue } from "../../mixin/ReadonlyValue";
 
 describe("Readonly value mixin", () => {
   class MyClass {

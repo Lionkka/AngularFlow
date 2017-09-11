@@ -1,3 +1,4 @@
+// SZ please move each class to own file.
 export default class LinkedList<T> {
     private tail:Nod<T>|null = null;
     private size:number = 0;

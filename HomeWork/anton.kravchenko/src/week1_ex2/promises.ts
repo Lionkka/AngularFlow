@@ -40,4 +40,17 @@ function runInOrderedParallel(delay1: number, delay2: number, delay3: number): v
         .then((values) => {
             console.log("DONE!");
         });
+
+
+    // SZ according to homework description you should write something like this.
+    // delayWithId(2, 1)
+    //     .then(() => {
+    //         return delayWithId(1, 2);
+    //     })
+    //     .then(() => {
+    //         return delayWithId(2, 3);
+    //     })
+    //     .then(() => {
+    //         console.log('DONE!!!');
+    //     });
 }

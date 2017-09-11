@@ -1,5 +1,5 @@
 import {} from "jest";
-import DeletableValue from "../../mixin/DeletableValue";
+import { DeletableValue } from "../../mixin/DeletableValue";
 
 describe("Deletable value mixin", () => {
   class MyClass {

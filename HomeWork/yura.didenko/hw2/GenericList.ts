@@ -1,5 +1,7 @@
 //Implement generic for two way linked list for different items type.
 
+// SZ each class and interface should be in separate file. Every thing else is ok
+
 class MyNode<T> {
     protected data:T;
     private _previous:MyNode<T>;

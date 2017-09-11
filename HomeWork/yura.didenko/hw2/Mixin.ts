@@ -1,6 +1,8 @@
 //Implement Mixin for Disposable, Deletable, Readable {isReadOnly}. Class should contains property value: string.
 // If Dispose it should be equals ''. If delete is should be equals 'deleted'. Id readonly it can't be changed.
 
+// SZ each class and interface should be in separate file. Every thing else is ok
+
 class Disposable {
     public isDisposed:boolean;
     public value:string;

@@ -4,6 +4,8 @@
 // If Dispose it should be equals ''. If delete is should be equals 'deleted'. 
 // Id readonly it can't be changed.
 
+// SZ each class should be in separate file, also each task should be in separate file too.
+
 class Disposable{
     _value: string;
     isReadOnly: boolean;
@@ -84,6 +86,7 @@ type LinkedList = {
 	data: LinkedList
 };
 
+// SZ ListNode should has generic type, which will be set in DoublyList
 class ListNode {
 	data: LinkedList;
 	previous: LinkedList;
@@ -95,7 +98,7 @@ class ListNode {
 		this.next = null;
 	}
 }
-
+// SZ DoublyList should has generic type like Array does
 class DoublyList {
 	_length: number;
 	head: LinkedList;

@@ -1,5 +1,5 @@
 import {} from "jest";
-import DisposableValue from "../../mixin/DisposableValue";
+import { DisposableValue } from "../../mixin/DisposableValue";
 
 describe("Disposible value mixin", () => {
   class MyClass {
