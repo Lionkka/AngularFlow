@@ -1,5 +1,6 @@
 import { LinkedListNode } from './linkedListNode'
 
+// SZ LinkedList class should has a generic type, which it passes into LinkedListNode
 export class LinkedList {
 
     constructor() {
@@ -20,6 +21,7 @@ export class LinkedList {
         return this.size === 0;
     };
 
+    // SZ method shouldn't has a type definition, only class should has it
     public addFirst<T>(element: T): void {   
         let tmpNode: LinkedListNode<T> = new LinkedListNode<T>(element, this.head, null);
         if(this.head !== null ) {
@@ -30,6 +32,7 @@ export class LinkedList {
             this.tail = tmpNode;
         }
         this._size++;
+        // SZ please use es6 templates for concatenation of this kind
         console.log("adding: "+element);
     };
 

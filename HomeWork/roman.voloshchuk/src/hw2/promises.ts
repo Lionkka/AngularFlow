@@ -6,6 +6,8 @@ const delay = function(time: number):Promise<string> {
     });
 }
 
+// SZ according to task description, you should start second promise only when first is finished.
+
 Promise.all([
     delay(3),
     delay(1),
