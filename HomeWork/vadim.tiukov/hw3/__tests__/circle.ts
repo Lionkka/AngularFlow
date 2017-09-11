@@ -93,7 +93,7 @@ describe("Circle", () => {
   it("should return square for radius eq 7", () => {
     const circle: Circle = new Circle();
     const radius: number  = 7;
-    const expectedSquare: number = 307.8760800517997;
+    const expectedSquare: number = 153.93804002589985;
 
     circle.radius = radius;
 
