@@ -5,7 +5,6 @@ function customAsync (): void {
      const promiseSecond = customDelay(4)
      const promiseThird = customDelay(5)
 
-     // SZ you should start second promise only when first is finished
      Promise.all([promiseFirst, promiseSecond, promiseThird]).then((values): string => {
          return 'DONE!'
      })
