@@ -88,9 +88,9 @@ class LinkedList<T> {
     }
   }
 
-  public delete(index: number): void {
-    //
-  }
+  // public delete(index: number): void {
+  //
+  // }
 
   public toArray(): T[] {
     const arr = [];
