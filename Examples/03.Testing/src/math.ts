@@ -8,7 +8,10 @@ export class Math {
     }
 
     public static factorialAsync(n: number, cb: (res:number) => void):void{
-        setTimeout(cb(Math.factorial(n)), 500);
+        setTimeout(() => {
+            const res = Math.factorial(n);
+            cb(res);
+        }, 500);
     }
 
     public static factorialAwait(n: number):Promise<number>{
