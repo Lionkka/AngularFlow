@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "build",
+    "noEmitOnError": true,
+    "rootDir": ".",
+    "watch": true,
+    "removeComments": true
+  },
+  "files": [
+    "./mixin.ts",
+    "./promise.ts"
+  ]
+}

@@ -25,6 +25,6 @@ export default class Circle {
   }
 
   public get square(): number {
-    return 2 * Math.PI * this.radius * this.radius;
+    return Math.PI * Math.pow(this.radius, 2);
   }
 }

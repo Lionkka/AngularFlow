@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+build
+node_modules
+yarn.lock
+
+# Build artifacts #
+.awcache/
+*.js.map
+*.map
+/home_work/dmitry.korol/HW2/css/*.css
+/home_work/dmitry.korol/HW2/*.html

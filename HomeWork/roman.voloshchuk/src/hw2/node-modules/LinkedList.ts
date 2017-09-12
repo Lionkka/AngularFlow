@@ -1,4 +1,8 @@
 // SZ please move each class to own file.
+// Ok. Class Nod was moved to Nod.ts. But as Nod class is just must be used only by LinkedList class
+// I think it may be left in the same file. Nod is just wrapper/holder for element:T.
+import Nod from './Nod';
+
 export default class LinkedList<T> {
     private tail:Nod<T>|null = null;
     private size:number = 0;
@@ -103,35 +107,5 @@ export default class LinkedList<T> {
             return current;
         }
         return null;
-    }
-}
-
-class Nod<T> {
-    private element:T;
-    private nextElement:Nod<T>|null = null;
-    private previousElement:Nod<T>|null = null;
-
-    constructor(elem:T){
-        this.element = elem;
-    }
-
-    getElement():T {
-        return this.element;
-    }
-    setNext(nextEl:Nod<T>|null):void {
-        this.nextElement = nextEl;
-    }
-    getNext():Nod<T>|null {
-        return this.nextElement;
-    }
-    setPrevious(prevEl:Nod<T>|null):void {
-        this.previousElement = prevEl;
-    }
-    getPrevious():Nod<T>|null {
-        return this.previousElement;
-    }
-
-    toString():string {
-        return this.element.toString();
     }
 }
