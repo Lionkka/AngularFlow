@@ -17,22 +17,22 @@ let coll = new Collector('waka', false);
 // SZ please use es6 templates for concatination
 // SZ console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
-console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
+console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
 coll.value = 'some value';
-console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
+console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
 coll.dispose();
-console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
+console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
 coll.delete();
-console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
+console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
 coll.readonly();
-console.log('Read Only: ' + coll.isReadOnly);
+console.log(`Read Only: ${coll.isReadOnly}`);
 
 coll.value = 'PackMan';
-console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
+console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
 
 /* Implement generic for two way linked list for different items type */
 

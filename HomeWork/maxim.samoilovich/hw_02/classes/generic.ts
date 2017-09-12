@@ -1,7 +1,6 @@
 import { IGeneric } from '../interfaces/igeneric';
 
 export class Generic<T> {
-    //private list: Array<IGeneric<T>>;
     private first: IGeneric<T>;
     private last: IGeneric<T>;
     private index: number;
@@ -31,7 +30,6 @@ export class Generic<T> {
     }
 
     public remove(idx: number): void {
-        //let idx = this.getIndexOf(item);
         let current: IGeneric<T> = this.first;
         let prev: IGeneric<T>;
         let next: IGeneric<T>;
@@ -52,9 +50,6 @@ export class Generic<T> {
                 current = current.next;
             }
         }
-        /*if (idx != -1) {
-            this.list.splice(idx, 1);
-        }*/
     }
 
     public getFirst(): T {
