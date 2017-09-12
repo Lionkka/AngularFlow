@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "./build",
+        "noEmitOnError": true,
+        "watch": true
+    },
+    "files": [
+        "./app.ts",
+        "./applyMixins.util.ts",
+        "./classes.ts",
+        "./jquery.cookie.d.ts"
+    ],
+    "typeRoots": [
+      "./"
+    ]
+}
