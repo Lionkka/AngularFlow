@@ -1,4 +1,7 @@
 // SZ please move each class to separate file.
+import Disposable from './mixins/Disposable';
+import Deletable from './mixins/Deletable';
+import ReadOnly from './mixins/ReadOnly';
 
 function applyMixins(derivedCtor: any, baseCtors: any[]){
     baseCtors.forEach(baseCtor => {
@@ -7,37 +10,6 @@ function applyMixins(derivedCtor: any, baseCtors: any[]){
         });
     });
 }
-
-class Disposable {
-    public dispose():void {
-        Object.getOwnPropertyNames(this).forEach(name => {
-            if (typeof this[name] === 'string') {
-                this[name] = '';
-            }
-        });
-    }
-}
-class Deletable {
-    public delete():void {
-        Object.getOwnPropertyNames(this).forEach(name => {
-            if (typeof this[name] === 'string') {
-                this[name] = 'deleted';
-            }
-        });
-    }
-}
-class ReadOnly {
-    public protect():void {
-        Object.getOwnPropertyNames(this).forEach(name => {
-            let tmp:any = this[name];
-            Object.defineProperty(this, name, {
-                value: tmp,
-                writable: false
-            });
-        });
-    }
-}
-
 
 class MixinTest implements Disposable, Deletable, ReadOnly {
     constructor(val:string) {
