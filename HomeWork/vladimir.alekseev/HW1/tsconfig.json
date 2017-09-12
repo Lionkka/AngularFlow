@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "./build",
+        "noEmitOnError": true,
+        "watch": true
+    },
+    "files": [
+        "./app.ts",
+        "./months.enum.ts",
+        "./toString.custom.ts",
+        "./valueOf.custom.ts"
+    ]
+}
