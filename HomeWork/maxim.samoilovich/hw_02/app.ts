@@ -14,6 +14,9 @@ applyMixins(Collector, [Disposable, Deletable, Readable]);
 
 let coll = new Collector('waka', false);
 
+// SZ please use es6 templates for concatination
+// SZ console.log(`Value: ${coll.value}; Read Only: ${coll.isReadOnly}`);
+
 console.log('Value: ' + coll.value + '; Read Only: ' + coll.isReadOnly);
 
 coll.value = 'some value';

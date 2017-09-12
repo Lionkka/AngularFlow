@@ -2,6 +2,9 @@
  Implement generic for two way linked list for different items type.
 */
 
+// SZ missed access modifiers for class members
+// SZ also each class should has own file 
+
 class ListNode<T> {
     data: T;
     nextNode?: T;
@@ -15,6 +18,7 @@ class ListNode<T> {
 }
 
 class LinkedList<T> {
+    // SZ please implement list without use of array
     list: ListNode<T>[];
 
     addToEnd(value: T):void {
