@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
     entry: path.join(__dirname, 'src/init.ts'),
@@ -13,14 +13,14 @@ module.exports = {
     },
     module:{
         loaders:[
-            {
-                test: /\.ts$/,
-                loader: 'awesome-typescript-loader',
-                query:{
-                    useCache: true
-                }
-            }
-        ]
+                    {
+                        test: /\.ts$/,
+                        loader: 'awesome-typescript-loader',
+                        query:{
+                            useCache: true
+                        }
+                    }
+            ]
     },
     watch: true
 };
