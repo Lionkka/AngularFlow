@@ -1,11 +1,26 @@
-module MyModule {
-    export interface MyInterface {
+export module MongoDb {
+    export class Connector {
+        public connect():boolean {
+            return true;
+        }
 
-    }
-
-    export class MyClass implements MyInterface {
-
-    }
+        public disconnect():boolean {
+            return true;
+        }
+    } 
 }
 
-var myClass = new MyModule.MyClass();
+export module RavenDb {
+    export class Connector {
+        public connect():boolean {
+            return false;
+        }
+
+        public disconnect():boolean {
+            return true;
+        }
+    } 
+}
+
+var connector = new MongoDb.Connector();
+connector.connect();
