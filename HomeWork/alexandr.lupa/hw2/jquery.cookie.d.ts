@@ -1,3 +1,10 @@
-// Create d.ts file for jQueryCookie library
-import $ from 'jquery';
+interface jQuery {
+  cookie: () => void;
+}
 
+
+;(function($) {
+  $.fn.cookie = function() {
+
+  };
+}(jQuery));

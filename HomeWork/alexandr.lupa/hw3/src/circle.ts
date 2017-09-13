@@ -11,13 +11,11 @@ export class Circle {
   }
 
   getCircleSquare(): number {
-    const square: number = Math.PI * this.radius * this.radius;
-    return parseFloat(square.toFixed(2));
+    return Math.PI * this.radius * this.radius;
   }
 
   getCircumference(): number {
-    const circumference: number = 2 * this.radius * Math.PI;
-    return parseFloat(circumference.toFixed(2));
+    return Math.PI * 2 * this.radius;
   }
 
 }
