@@ -21,3 +21,14 @@
 ## Homework 4 ##
 - Modify order calculation. Calculate order only after delay in 2 seconds. Cover logic by the unit tests.
 - Create orderUsage.js file. Require order.js file. Create bundle.js file with entry point orderUsage.js with webpack.(For Vadim/Anton use System.js)
+
+## Homework 5 ##
+- Create application on type script. Application use jquery library, bootstrap scss library and contains few png on the page. Application should be contains two input fields (email and name). If email and name is valid and button pressed should be show pop-up window with png picture on the background.
+- all ts should be bundled with web pack.
+- All scripts should use OOP style
+- scss should be transpile into css
+- jquery should be included in common chunk(CommonChunk Plugin)
+- scripts add to html automatically.
+- on the page we should show version of the script(version define by webpack)
+- version has to be shown only for development version of build
+- images included and put to the sources via webpack

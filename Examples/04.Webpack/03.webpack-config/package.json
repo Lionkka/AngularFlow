@@ -1,15 +1,16 @@
 {
-  "name": "08.common-html-plugin",
+  "name": "03.webpack-config",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
+    "webpack": "node ./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.5.6"
   }
 }
