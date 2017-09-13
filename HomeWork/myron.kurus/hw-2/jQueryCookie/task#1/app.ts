@@ -2,6 +2,7 @@ import { Disposable } from './disposable';
 import { Deletable } from './deletable';
 import { Readable } from './readable';
 
+// SZ mixin apply is missed
 class MixinApp implements Disposable, Deletable, Readable {
     public value: string;
     public valueReadOnly: boolean;
