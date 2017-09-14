@@ -1,4 +1,4 @@
-import Circle from './../src/hw3/Circle';
+import Circle from './../../src/hw3/Circle';
 import {} from 'jest';
 import {assert} from 'chai';
 
