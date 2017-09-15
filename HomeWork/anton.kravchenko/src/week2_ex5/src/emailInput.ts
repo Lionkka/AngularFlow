@@ -3,7 +3,6 @@ import * as $ from "jquery";
 class EmailInput {
     el: any;
     emailRegExp: RegExp;
-
     constructor() {
         this.emailRegExp = /\S+@\S+\.\S+/;
     }
