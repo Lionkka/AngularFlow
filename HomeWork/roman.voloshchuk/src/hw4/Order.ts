@@ -32,6 +32,8 @@ export class Order {
     }
 
     private _delay(callback:()=>void, time:number):void {
+        // SZ please use promise for all async operations
+        // SZ callbacks is strictly forbidden
         setTimeout(() => {
             callback();
         }, time * 1000);
