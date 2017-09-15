@@ -11,13 +11,13 @@ const delay = function (time: number, message: string): Promise<null> {
 
 
 const firstPromise = delay(2, 'First promise was end');
-const secondPromise = delay(1, 'Second promise was end');
-const thirdPromise = delay(1, 'Third promise was end');
+const secondPromise = delay(4, 'Second promise was end');
 
-Promise.race([firstPromise, secondPromise])
-    .then(thirdPromise);
+const middlePromise =
+    Promise.race([firstPromise, secondPromise])
+        .then(()=>delay(1, 'Third promise was end'));
 
-Promise.all([firstPromise, secondPromise, thirdPromise])
+Promise.all([firstPromise, secondPromise, middlePromise])
     .then(() => {
         console.log('Done!');
     });
