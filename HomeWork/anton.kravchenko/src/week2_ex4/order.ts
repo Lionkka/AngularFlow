@@ -24,6 +24,7 @@ class Order {
     }
 
     public asyncCountTotal(tax: number, cb: () => number): void  {
+        // SZ please use promises for all async operations
         setTimeout(cb(this.countTotal(tax)), 2000);
     }
 }
