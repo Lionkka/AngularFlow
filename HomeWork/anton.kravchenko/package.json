@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}' -e 'src/week2_ex5/**' ",
     "pretest": "npm run lint",
     "test": "jest --coverage",
     "jest": "jest --watch --notify",
