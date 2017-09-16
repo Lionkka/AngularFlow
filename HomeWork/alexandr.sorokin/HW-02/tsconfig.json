@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "outDir": "build",
     "noEmitOnError": true,
@@ -10,6 +10,7 @@
   },
   "files": [
     "./mixin.ts",
-    "./promise.ts"
+    "./promise.ts",
+    "./doubly-linked-list.ts"
   ]
 }
