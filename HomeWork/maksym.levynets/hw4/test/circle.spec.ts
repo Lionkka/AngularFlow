@@ -24,7 +24,7 @@ describe('Test for Circle class.', ():void => {
 	});
 	
 	test('Should have method calcSquare.', ():void => {
-		//circle.addRadius(checkMethodsRadius);
+		circle.addRadius(checkMethodsRadius);
 		const expectedSquare: number = PI*Math.pow(checkMethodsRadius,2);
 		const actualSquare: number = circle.calcSquare();
 		assert.equal(actualSquare, expectedSquare, 'Wrong Square value');
