@@ -2,6 +2,23 @@ import { Order } from '../src/order';
 import {} from 'jest';
 import { assert } from 'chai';
 
+test('Test get total functionality. Add thee items 2. Expect 6', ():void => {
+    // Arrange
+    const order: Order = new Order();
+    const item: number = 2;
+    const expectedTotal:number = 6.3;
+
+    order.addItem(item);
+    order.addItem(item);
+    order.addItem(item);
+
+    // Act
+    const actualTotal: number = order.countTotal(5); 
+
+    //Assert
+    assert.equal(actualTotal, expectedTotal, 'Not right total calculation')
+});
+
 test('Add item. Expect items count increase by one', () => {
     // Arrange
     const order: Order = new Order();
