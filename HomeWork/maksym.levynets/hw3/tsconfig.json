@@ -58,6 +58,7 @@
   
   "files" : [
     "task-1.ts",
-    "task-2.ts"
+    "task-2.ts",
+    "task-3.ts"
   ]
 }
