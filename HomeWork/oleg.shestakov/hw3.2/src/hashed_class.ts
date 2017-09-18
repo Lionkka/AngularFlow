@@ -1,8 +1,10 @@
 function hashed() {
     return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         const oldValue = descriptor.value;
-        descriptor.value = function() {
-            let tempThis = <any>this;
+        descriptor.value = function() { 
+            let tempThis = <any>this; // SZ this is a deprecated form of explicit type conversion
+            // SZ please use this
+            // SZ let tempThis = this as any; - NOT for rework
             tempThis.hash = tempThis.id + " " + tempThis.constructor.name;
             oldValue.call(this, arguments);
         }
