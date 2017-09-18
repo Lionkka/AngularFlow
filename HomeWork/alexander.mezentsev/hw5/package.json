@@ -13,7 +13,7 @@
     "@types/bootstrap": "^3.3.36",
     "@types/jquery": "^3.2.12",
     "awesome-typescript-loader": "^3.2.3",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-beta",
     "bootstrap-loader": "^2.2.0",
     "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.28.7",
@@ -30,5 +30,10 @@
     "typings": "^2.1.1",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.6"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^3.3.36",
+    "@types/jquery": "^3.2.12",
+    "popper.js": "^1.12.5"
   }
 }
