@@ -1,6 +1,6 @@
 /*
 ## Homework 6 ##
- - Create counter component. (first) Component contains two buttons first add 1 to general count.
+ - Create counter component. Component contains two buttons first add 1 to general count.
 Second substract 1 from general count. Count should be shown pretty. Html should be in separate file.
 We need to set counter step.
 If I do not push the button after each 20 seconds counter increase by 1 point and if it increase automatically counter should be colored by red.
