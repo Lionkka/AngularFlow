@@ -1,5 +1,5 @@
-var prod = 'This is production!';
-var dev = 'This is developer env';
+const prod = 'This is production!';
+const dev = 'This is developer env';
 
 console.log('Running app version - ' + version + '. Env - ' + ENV);
 

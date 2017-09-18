@@ -1,0 +1,34 @@
+{
+    "name": "hw3.2",
+    "version": "1.0.0",
+    "description": "Homework 3",
+    "repository": "-",
+    "author": "Oleg Shestakov<oleg.shestakov.seventeen@gmail.com>",
+    "license": "-",
+    "devDependencies": {
+      "typescript": "^2.5.2"
+    },
+    "jest": {
+      "transform": {
+        "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      },
+      "testRegex": "/test/.*\\.(ts|tsx|js)$",
+      "coverageReporters": [
+        "html"
+      ],
+      "coverageDirectory": "coverage",
+      "collectCoverageFrom": [
+        "src/**/*.ts"
+      ],
+      "moduleFileExtensions": [
+        "ts",
+        "js",
+        "json"
+      ]
+    },
+    "scripts": {
+      "test": "node ./node_modules/jest/bin/jest test --watch --coverage",
+      "build": "./node_modules/.bin/tsc src/decorated_class.ts"
+    }
+  }
+  

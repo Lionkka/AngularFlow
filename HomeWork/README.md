@@ -13,6 +13,25 @@
 ## Homework 3 ##
 - Create Circle class. It contains three properties x, y and radius. Create method calculate circle square. Create method calculate circle length. If radius will be more that 100 and less than 0 throw exception. Use TDD paradigm and jest framework.
 
+## Homework 3 (Group 2) ##
+- Create decorator for class. Decorator should add method componentDidMount that console log 'Component ${name} was mounted'.
+- Create decorator for method that before method invoke fill field hash of class (get name and class id and put to added field name)
+- Add decorator notify. Decorator before invoke the method should be invoke all methods from input array of callbacks.  
+
 ## Homework 4 ##
 - Modify order calculation. Calculate order only after delay in 2 seconds. Cover logic by the unit tests.
 - Create orderUsage.js file. Require order.js file. Create bundle.js file with entry point orderUsage.js with webpack.(For Vadim/Anton use System.js)
+
+## Homework 5 ##
+- Create application on type script. Application use jquery library, bootstrap scss library and contains few png on the page. Application should be contains two input fields (email and name). If email and name is valid and button pressed should be show pop-up window with png picture on the background.
+- all ts should be bundled with web pack.
+- All scripts should use OOP style
+- scss should be transpile into css
+- jquery should be included in common chunk(CommonChunk Plugin)
+- scripts add to html automatically.
+- on the page we should show version of the script(version define by webpack)
+- version has to be shown only for development version of build
+- images included and put to the sources via webpack
+
+## Homework 6 ##
+ - Create counter component. (first) Component contains two buttons first add 1 to general count. Second substract 1 from general count. Count should be shown pretty. Html should be in separate file. We need to set counter step. If I do not push the button after each 20 seconds counter increase by 1 point and if it increase automatically counter should be colored by red. If I increase/decrease by button counter should be colored blue(pretty blue). Second component should contains number only.

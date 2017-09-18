@@ -1,5 +1,5 @@
-var path = require('path');
-var Plugin = require('case-sensitive-paths-webpack-plugin');
+const path = require('path');
+const Plugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = {
     entry: path.join(__dirname, 'src/init.js'),
@@ -12,7 +12,6 @@ module.exports = {
     resolve: {
         extensions: ['.js']
     },
-    devtool: 'source-map',
-    plugins: [new Plugin()]
+    plugins: [ new Plugin() ]
 
 };

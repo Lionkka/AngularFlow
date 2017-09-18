@@ -1,3 +1,4 @@
+// SZ each class should has own file
 export class Deletable {
     public _value;
 

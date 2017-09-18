@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
     entry: path.join(__dirname, './src/init.js'),
@@ -12,5 +12,4 @@ module.exports = {
         extensions: ['.js']
     },
    watch: true
-
 };

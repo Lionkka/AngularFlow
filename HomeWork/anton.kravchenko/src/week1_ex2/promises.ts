@@ -16,41 +16,15 @@ function runInParallel(delay1: number, delay2: number, delay3: number): void {
     const p2 = delayWithId(delay2, 2);
     const p3 = delayWithId(delay3, 3);
 
-    Promise.all([p1, p2, p3])
-        .then((values) => {
-            console.log("DONE!");
-        });
+    Promise.all([p1, p2, p3]).then((values) => console.log("DONE!"));
 }
 
 function runInOrderedParallel(delay1: number, delay2: number, delay3: number): void {
     console.log("runInOrderedParallel");
 
-    const p1 = new Promise<number>((resolve) => {
-        setTimeout(() => {
-            console.log(1);
-
-            const p2 = delayWithId(delay2, 2);
-            p2.then((result) => resolve);
-
-        }, delay1 * 1000);
-    });
+    const p1 = delayWithId(delay1, 1).then(() => delayWithId(delay2, 2));
 
     const p3 = delayWithId(delay3, 3);
-    Promise.all([p1, p3])
-        .then((values) => {
-            console.log("DONE!");
-        });
 
-
-    // SZ according to homework description you should write something like this.
-    // delayWithId(2, 1)
-    //     .then(() => {
-    //         return delayWithId(1, 2);
-    //     })
-    //     .then(() => {
-    //         return delayWithId(2, 3);
-    //     })
-    //     .then(() => {
-    //         console.log('DONE!!!');
-    //     });
+    Promise.all([p1, p3]).then((values) => console.log("DONE!"));
 }

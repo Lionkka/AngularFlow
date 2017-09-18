@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "outDir": "./build",
+      "sourceMap": true,
+      "watch": true,
+      "rootDirs": ["./src"]
+    },
+    "exclude": [
+        "typings",
+        "node_modules",
+        "**/*.test.ts"
+    ]
+  }

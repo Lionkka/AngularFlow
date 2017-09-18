@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'src/init.js'),
@@ -13,5 +13,4 @@ module.exports = {
         extensions: ['.js']
     },
     plugins: [new webpack.optimize.UglifyJsPlugin()]
-
 };

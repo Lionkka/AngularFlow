@@ -22,11 +22,11 @@ test('Test circle radius. If radius is less than 0, should be returns throw Exce
   }, 'Invalid radius range');
 });
 
-test('Test circle radius. If radius 50, square should be 7853.98', () => {
+test('Test circle radius. If radius 50, square should be PI * radius^2', () => {
   // aragne
   const radius: number = 50;
   const circle: Circle = new Circle(0, 0, radius);
-  const expectedResult: number = 7853.98;
+  const expectedResult: number = Math.PI * radius * radius;
 
   // act
   const actualResult: number = circle.getCircleSquare();
@@ -35,11 +35,11 @@ test('Test circle radius. If radius 50, square should be 7853.98', () => {
   assert.equal(actualResult, expectedResult, 'Wrong square calculation');
 });
 
-test('Test getCircumference. If radius 50, circumference should be 314.16', () => {
+test('Test getCircumference. If radius 50, circumference should be PI * radius * 2', () => {
   // aragne
   const radius: number = 50;
   const circle: Circle = new Circle(0, 0, radius);
-  const expectedResult: number = 314.16;
+  const expectedResult: number = 2 * radius * Math.PI;
 
   // act
   const actualResult: number = circle.getCircumference();
