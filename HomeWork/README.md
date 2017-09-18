@@ -35,3 +35,6 @@
 
 ## Homework 6 ##
  - Create counter component. (first) Component contains two buttons first add 1 to general count. Second substract 1 from general count. Count should be shown pretty. Html should be in separate file. We need to set counter step. If I do not push the button after each 20 seconds counter increase by 1 point and if it increase automatically counter should be colored by red. If I increase/decrease by button counter should be colored blue(pretty blue). Second component should contains number only.
+
+ ## Homework 7 ##
+- Create root component container. As its first child element create clock container(has clock but not show it). As clock container timer child create show-time component (It shows time and has button - remember time). As root container child create element time-capsule. It can remember time from show-time container. This container contains element that has button thats trigger event that forced show time container show remembered time for 5 seconds. After this it has to show time as usually.
