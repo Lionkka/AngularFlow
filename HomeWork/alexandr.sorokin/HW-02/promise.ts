@@ -13,8 +13,8 @@ function createPromise(value: string): Promise<string>{
 
 Promise.all([
     createPromise('promise #1'),
-    createPromise('promise #2')
-
+    createPromise('promise #2'),
+    createPromise('promise #3')
 ]).then(function (results: string[]) {
     console.log('DONE!');
 });

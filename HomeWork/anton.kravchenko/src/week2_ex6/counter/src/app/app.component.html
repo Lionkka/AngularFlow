@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <h1>Week 2 homework 3</h1>
+  <app-counter [generalCount]="generalCount"></app-counter>
+  <div>
+    <label class={{counterState}}>Counter: {{counter}} </label>
+  </div>
+  <button (click)="updateCounter(-1)"> - </button>
+  <button (click)="submit()"> Submit </button>
+  <button (click)="updateCounter(1)"> + </button>
+</div>

@@ -1,5 +1,5 @@
 {
-  "name": "03.Testing",
+  "name": "hw4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,12 +26,12 @@
     "@types/chai": "^4.0.4",
     "@types/jest": "^20.0.8",
     "chai": "^4.1.2",
-    "jest": "^21.0.1",
+    "jest": "^21.0.2",
     "ts-jest": "^21.0.0",
     "typescript": "^2.5.2"
   },
   "scripts": {
-    "test": "node node_modules/.bin/jest test --watch --coverage"
+    "test": "node node_modules/jest/bin/jest test --watch --coverage"
   },
   "keywords": [],
   "author": "",
