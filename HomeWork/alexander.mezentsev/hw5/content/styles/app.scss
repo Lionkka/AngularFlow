@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./common";
+body {
+    background-color: lightblue;
+    height: 100%;
+
+    .container{
+       padding-top: 150px; 
+
+        .form-group.has-error {
+            input.form-control {
+                border: 1px solid red;
+            }
+        }
+    }
+}

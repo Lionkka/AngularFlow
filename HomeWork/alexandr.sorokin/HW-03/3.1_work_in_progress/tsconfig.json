@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "build",
+    "noEmitOnError": true,
+    "rootDir": ".",
+    "watch": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "files": [
+    "./class-decorator.ts",
+    "./method-decorator.ts"
+  ]
+}

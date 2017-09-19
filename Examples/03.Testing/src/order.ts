@@ -12,7 +12,7 @@ export class Order {
             throw new Error('Invalid tax range');
         }
 
-        const total = this.items.reduce((r, i) => {
+        const total = this.items.reduce((r, i):number => {
             return r += i;
         });
 
