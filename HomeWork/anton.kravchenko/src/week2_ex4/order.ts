@@ -23,8 +23,8 @@ class Order {
         return total + (total / 100) * tax;
     }
 
-    public asyncCountTotal(tax: number, cb: () => number): void  {
-        setTimeout(cb(this.countTotal(tax)), 2000);
+    public asyncCountTotal(tax: number): Promise<number>  {
+        return new Promise<number>((resolve) => setTimeout(resolve(this.countTotal(tax), 2000));
     }
 }
 

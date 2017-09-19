@@ -1,0 +1,6 @@
+button, input {
+    float: left;
+    &:not(:last-child) {
+        margin-left: .5rem;
+    }
+}

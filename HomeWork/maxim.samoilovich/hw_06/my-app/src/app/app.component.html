@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="logo">
+        <img src="assets/logo-angular.png" />
+      </div>
+      <div class="title">
+        <span>{{title}}</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="cont">
+        <app-counter></app-counter>
+        <app-manager (increase)="onIncrease($event)" (decrease)="onDecrease($event)"></app-manager>
+      </div>
+    </div>
+  </div>
+</div>
+
