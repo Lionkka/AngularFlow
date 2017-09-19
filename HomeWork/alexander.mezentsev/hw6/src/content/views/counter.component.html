@@ -1,0 +1,10 @@
+<app-count [count]="count" [countColor]="countColor"></app-count>
+<div class="form-inline">
+  <button class="btn btn-primary" (click)='setCountManually(false)'>Subtract</button>
+  <div class="form-group">
+    <label class="sr-only" for="countDelta">Count</label>
+    <input type="text" class="form-control" id="countDelta" [(ngModel)]="delta" placeholder="Count">
+  </div>
+  <button class="btn btn-primary" (click)='setCountManually(true)'>Add</button>
+</div>
+
