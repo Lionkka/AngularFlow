@@ -18,7 +18,8 @@ export class CounterComponent implements OnInit {
   private _timeout: number = 5; // 20 seconds
   // SZ please use window.setTimteout(...);
   // SZ it returns number
-  private timer: NodeJS.Timer;
+  // Fixed (SZ it returns number)
+  private timer: number;
   public delta: string = '1';
   public count: number = 0;
   public countColor: string = 'blue';
@@ -29,7 +30,8 @@ export class CounterComponent implements OnInit {
 
   private startTimer(): void {
     clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
+    // Fixed (SZ please use window.setTimteout(...);)
+    this.timer = window.setTimeout(() => {
       this.setCountAutomatically(true);
     }, this._timeout * 1000);
   }
