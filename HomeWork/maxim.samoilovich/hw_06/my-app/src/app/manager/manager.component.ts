@@ -6,6 +6,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
     styleUrls: ['manager.component.scss']
 })
 export class ManagerComponent {
+    // SZ this.mutator has type number
+    // SZ so event emiters should have type number, not any
     @Output() increase = new EventEmitter<any>();
     @Output() decrease = new EventEmitter<any>();
 

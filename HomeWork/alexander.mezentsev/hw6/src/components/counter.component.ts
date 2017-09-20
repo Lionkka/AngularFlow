@@ -16,6 +16,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CounterComponent implements OnInit {
   private _timeout: number = 5; // 20 seconds
+  // SZ please use window.setTimteout(...);
+  // SZ it returns number
   private timer: NodeJS.Timer;
   public delta: string = '1';
   public count: number = 0;
