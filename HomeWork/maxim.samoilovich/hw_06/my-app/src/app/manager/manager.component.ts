@@ -8,8 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ManagerComponent {
     // SZ this.mutator has type number
     // SZ so event emiters should have type number, not any
-    @Output() increase = new EventEmitter<any>();
-    @Output() decrease = new EventEmitter<any>();
+    @Output() increase = new EventEmitter<number>();
+    @Output() decrease = new EventEmitter<number>();
 
     private mutator: number;
 
