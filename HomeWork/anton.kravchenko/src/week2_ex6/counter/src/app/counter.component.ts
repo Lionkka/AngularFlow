@@ -5,6 +5,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './counter.component.html',
 })
 export class CounterComponent {
-  // SZ missed access modifier
-  @Input() generalCount: number;
+  @Input() public generalCount: number;
 }
