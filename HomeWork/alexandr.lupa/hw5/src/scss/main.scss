@@ -1,0 +1,8 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.webpack-logo {
+  height: 200px;
+  background: url(../images/logo-on-white-bg.png) no-repeat 50% 50%;
+  background-size: contain;
+}

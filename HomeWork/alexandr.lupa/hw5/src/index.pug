@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title My Awesome App
+
+  body
+    .container
+      .page-header
+        h1 My Awesome App
+
+    .container
+      .row
+        .col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+
+          .panel.panel-default
+            .panel-heading
+              h3.panel-title Auth Form
+
+            .panel-body
+
+              form#form(action="#", method="get")
+
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      .glyphicon.glyphicon-user
+                    input.form-control(type="text", placeholder="Name", name="username")
+
+                .form-group
+                  .input-group
+                    .input-group-addon
+                      .glyphicon.glyphicon-envelope
+                    input.form-control(type="email", placeholder="Email", name="email")
+
+                button.btn.btn-primary.pull-right(type="submit") Submit
+
+    #modal.modal.fade(tabindex="-1", role="dialog")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true") &times;
+            h4.modal-title Modal title
+
+          .modal-body
+            .webpack-logo
+
+          .modal-footer
+            button.btn.btn-default(type="button", data-dismiss="modal") Close
