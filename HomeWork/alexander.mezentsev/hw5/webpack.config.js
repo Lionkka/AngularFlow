@@ -8,7 +8,7 @@ module.exports = {
         styles: './content/styles/app.scss',
         image: './content/images/awesome.jpg',
         app: path.join(__dirname, './src/app.ts'),
-        vendor: ['jquery', 'bootstrap']
+        vendor: ['jquery', 'popper.js', 'bootstrap']
     },
 
     output: {
@@ -33,6 +33,7 @@ module.exports = {
             tether: 'tether',
             Tether: 'tether',
             'window.Tether': 'tether',
+            'Popper': 'popper.js'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

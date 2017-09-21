@@ -1,0 +1,20 @@
+.counter {
+    font-size: 4rem;
+    text-align: center;
+    background: -webkit-linear-gradient(#333, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.5);
+    &.terminated {
+        background: -webkit-linear-gradient(#8B1414, #DD2A2A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1px 1px 1px rgba(218, 29, 29, 0.5);
+    }
+    &.revived {
+        background: -webkit-linear-gradient(#093CC9, #91AEFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1px 1px 1px rgba(35, 62, 218, 0.5);
+    }
+}
