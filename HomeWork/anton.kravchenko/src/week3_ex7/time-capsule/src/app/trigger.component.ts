@@ -7,11 +7,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `
 })
 export class TriggerComponent {
-  @Input() timeToTrigger: string;
-  @Output() triggerTime = new EventEmitter<void>();
+  @Input() public timeToTrigger: string;
+  @Output() public triggerTime: EventEmitter<void> = new EventEmitter<void>();
 
-  passTriggeredTime(): void {
+  public passTriggeredTime(): void {
     this.triggerTime.emit();
   }
 }
-

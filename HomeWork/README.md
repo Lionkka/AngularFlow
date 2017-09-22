@@ -18,8 +18,10 @@
 - Create decorator for method that before method invoke fill field hash of class (get name and class id and put to added field name)
 - Add decorator notify. Decorator before invoke the method should be invoke all methods from input array of callbacks.  
 
-## Homework 4 ##
+## Homework 4 ## (Group 2)
 - Modify order calculation. Calculate order only after delay in 2 seconds. Cover logic by the unit tests.
+
+## Homework 4 ## (Group 1)
 - Create orderUsage.js file. Require order.js file. Create bundle.js file with entry point orderUsage.js with webpack.(For Vadim/Anton use System.js)
 
 ## Homework 5 ##
@@ -38,3 +40,8 @@
 
  ## Homework 7 ##
 - Create root component container. As its first child element create clock container(has clock but not show it). As clock container timer child create show-time component (It shows time and has button - remember time). As root container child create element time-capsule. It can remember time from show-time container. This container contains element that has button thats trigger event that forced show time container show remembered time for 5 seconds. After this it has to show time as usually.
+
+## Homework 8 ##
+- Password pipe. Input string output * symbols instead all characters.
+- Create orderBy pipe for ordering numeric and string arrays. Input parameter sort order Asc/Desc.
+- Create translator pipe that will be translate words that contains in the included dictionary. EN -> RU

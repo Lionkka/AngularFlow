@@ -19,28 +19,28 @@ export class CounterComponent {
     }
 
     // SZ methods should have access modifier
-    incCounter(val: number): void {
+    public incCounter(val: number): void {
         this.counter += val;
-        clearInterval(this.timer);
+        clearTimeout(this.timer);
         this.manageTimer();
     }
 
     // SZ missed access modifier and return type
-    decCounter(val: number) {
+    public decCounter(val: number): void {
         this.counter -= val;
-        clearInterval(this.timer);
+        clearTimeout(this.timer);
         this.manageTimer();
     }
 
-    startTimer() {
+    private startTimer() {
         // SZ you won't need this if you are use arrow function
         // SZ arrow function doesn't has own context, it use context of scope
         // where it was declared
-        const that = this;
+        // -> const that = this;
 
         // SZ please use arrow function
-        return new Promise(function(resolve, reject) {
-            that.timer = setInterval(() => {
+        return new Promise((resolve, reject) => {
+            this.timer = setTimeout(() => {
                 // SZ there is no sence to resolve a promise more than onece
                 resolve();
             }, 20000);
@@ -49,7 +49,7 @@ export class CounterComponent {
 
     // SZ parameters should have type too
     // SZ auto: boolean = true
-    manageTimer(auto = true) {
+    private manageTimer(auto: boolean = true) {
         if (auto) {
             this.allIsOk();
         }
@@ -59,12 +59,12 @@ export class CounterComponent {
         });
     }
 
-    alert(): void {
+    private alert(): void {
         this.isTerminated = true;
         this.isRevived = !this.isTerminated;
     }
 
-    allIsOk(): void {
+    private allIsOk(): void {
         this.isTerminated = false;
         this.isRevived = !this.isTerminated;
     }

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Output, EventEmitter, Input, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'show-time',
@@ -7,39 +7,43 @@ import { Component, OnInit, OnChanges, Output, EventEmitter, Input } from '@angu
       <button (click)="passTimeToShow()">Remember Me</button>
     `
   })
-  export class ShowTimeComponent implements OnInit, OnChanges {
-    currentTime: string = new Date().toString();
-    private updateTimeInterval;
+  export class ShowTimeComponent implements OnInit, OnChanges, OnDestroy {
+    private currentTime: string = new Date().toString();
+    private updateTimeInterval: number;
 
-    @Input() triggeredTime: string;
-    @Output() timeToShow = new EventEmitter<string>();
-
-    passTimeToShow(): void {
-      this.timeToShow.emit(this.currentTime);
-    }
+    @Input() public triggeredTime: string;
+    @Output() private timeToShow: EventEmitter<string> = new EventEmitter<string>();
 
     private setUpTimeUpdate(): void {
-      this.updateTimeInterval = setInterval(() => this.currentTime = new Date().toString(), 1000);
+      this.updateTimeInterval = window.setInterval(() => this.currentTime = new Date().toString(), 1000);
     }
 
     private resetTimer(): void {
-        clearTimeout(this.updateTimeInterval);
+        clearInterval(this.updateTimeInterval);
     }
 
-    ngOnInit(): void {
+    public passTimeToShow(): void {
+      this.timeToShow.emit(this.currentTime);
+    }
+
+    public ngOnInit(): void {
       this.setUpTimeUpdate();
     }
 
-    ngOnChanges(): void {
-      if(this.triggeredTime){
+    public ngOnDestroy(): void {
+      this.resetTimer();
+    }
+
+    public ngOnChanges(): void {
+      if (this.triggeredTime) {
         new Promise((resolve) => {
           this.resetTimer();
           this.currentTime = this.triggeredTime;
           /* Timer will update after 5 seconds (4 seconds for timeout and 1 seconds for setInterval*/
-          setTimeout(() => resolve(), 5000 - 1000);
+          window.setTimeout(() => resolve(), 5000 - 1000);
         }).then(() => {
           this.setUpTimeUpdate();
-        })
+        });
       }
     }
   }

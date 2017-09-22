@@ -8,16 +8,14 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent {
-  title = 'app';
-  timeToShow: string;
-  triggeredTime: string;
+  public timeToShow: string;
+  public triggeredTime: string;
 
-  saveTimeToShow(time: string): void {
+  public saveTimeToShow(time: string): void {
     this.timeToShow = time;
   }
 
-  saveTriggeredTime(time): void {
+  public saveTriggeredTime(time: string): void {
     this.triggeredTime = time;
   }
 }
-

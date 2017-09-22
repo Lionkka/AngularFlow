@@ -1,0 +1,5 @@
+<div class="bordered">
+    <h3 class="title">TranslateIt!</h3>
+    <input type="text" #inputTrans [value]="data" (input)="onInput(inputTrans.value)" />
+    <span>{{ data | translate }}</span>
+</div>

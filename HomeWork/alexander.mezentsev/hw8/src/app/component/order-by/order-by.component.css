@@ -1,0 +1,8 @@
+.form-horizontal:last-child {
+  float: left;
+}
+
+.form-group {
+  float: left;
+  padding-right: 50px;
+}

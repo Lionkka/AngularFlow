@@ -3,6 +3,10 @@ import { assert } from 'chai';
 import { Math } from '../src/math';
 
 describe('Test suite for Math static methods', () => {
+    beforeEach(() => {
+        console.log('Hello world');
+    });
+
     it('Input 1, expected 1', () => {
         const input: number = 1;
         
