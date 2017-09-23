@@ -1,0 +1,24 @@
+<div class="bordered">
+    <h3 class="title">OrderIt!</h3>
+    <div class="left">
+        <input type="text" #inputArray [value]="data" (input)="onInput(inputArray.value)" (keyup.enter)="onAdd()" />
+        <div class="actions">
+            <button (click)="onAdd()">{{ 'add' | translate }}</button>
+            <button (click)="clearData()">{{ 'clear' | translate }}</button>
+        </div>
+    </div>
+    
+    <div class="right">
+        <div class="controls">
+            <input type="radio" name="order" (click)="asc()" checked> ASC
+            <input type="radio" name="order" (click)="desc()"> DESC
+        </div>
+            
+        <div class="items">
+            <span *ngFor="let item of dataStore">{{ item }}</span>
+        </div>
+        <div class="items">
+            <span *ngFor="let item of (dataStore | orderby:order)">{{ item }}</span>
+        </div>
+    </div>
+</div>
