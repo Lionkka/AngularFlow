@@ -45,3 +45,10 @@
 - Password pipe. Input string output * symbols instead all characters.
 - Create orderBy pipe for ordering numeric and string arrays. Input parameter sort order Asc/Desc.
 - Create translator pipe that will be translate words that contains in the included dictionary. EN -> RU
+
+## Homework 9 ##
+- Given two buttons - Increment and decrement.(3 different component two buttons and one counter title)
+- Given counter - After starting application it disabled. After two seconds after app start it enabled to increase/decrease
+- Counter decrease/increase appear to counter after 1 second delay.
+- Use redux components architecture.
+- Enjoy!
