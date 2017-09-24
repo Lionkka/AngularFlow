@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "prod",
+    "noEmitOnError": true,
+    "rootDir": ".",
+    "watch": true,
+    "removeComments": true
+  },
+  "files": [
+    "./mixin.ts",
+    "./promise.ts",
+    "./jqueryCookie/jQueryCookie.d.ts",
+  ]
+}
