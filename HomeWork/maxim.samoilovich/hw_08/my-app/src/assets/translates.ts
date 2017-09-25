@@ -1,3 +1,4 @@
+// SZ please use Map<string, string> for dictionary
 export let dictionary: object = {
     about: 'про',
     across: 'через',

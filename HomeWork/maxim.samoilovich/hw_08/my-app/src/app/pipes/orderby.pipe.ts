@@ -1,3 +1,4 @@
+// SZ please move these pipes into app folder, pipes are parts of app
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
