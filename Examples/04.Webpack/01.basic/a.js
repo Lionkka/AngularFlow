@@ -1,4 +1,3 @@
-require('./c');
+import * as c from'./c';
 
 console.log('a');
-console.log('Hello world');
