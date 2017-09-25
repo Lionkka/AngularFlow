@@ -15,6 +15,7 @@ export class AppComponent {
   public timer: number;
 
   public inTimer(value: number): void {
+    // SZ please use inputs and outputs for solving this task
     this.capsule.setTime(value);
   }
 }

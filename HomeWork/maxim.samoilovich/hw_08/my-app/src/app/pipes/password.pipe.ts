@@ -10,5 +10,7 @@ export class PasswordPipe implements PipeTransform {
             out += '*';
         }
         return out; // value.replace(/.*/, '*');
+        // SZ here is more semantic way. NOT for rework.
+        // SZ '*'.repeat(value.length);
     }
 }

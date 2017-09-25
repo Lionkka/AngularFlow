@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderByPipe } from './../../pipes/orderby.pipe';
+// import { OrderByPipe } from './../pipes/orderby.pipe';
 import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-order',
     templateUrl: './order.component.html',
-    styleUrls: [ './order.component.scss' ],
-    providers: [ OrderByPipe ]
+    styleUrls: [ './order.component.scss' ]/*,
+    providers: [ OrderByPipe ]*/
 })
 export class OrderComponent implements OnInit {
     private dataStore: string[] | number[];
@@ -15,7 +15,7 @@ export class OrderComponent implements OnInit {
 
     public tmp: string;
 
-    constructor(private orderPipe: OrderByPipe) {}
+    constructor() {}
 
     private push(item: number | string): void {
         this.dataStore[this.dataStore.length] = item;
