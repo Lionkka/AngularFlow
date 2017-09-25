@@ -1,4 +1,4 @@
-var app = require('./components/application');
+const app = require('./components/application');
 
 app.application();
 

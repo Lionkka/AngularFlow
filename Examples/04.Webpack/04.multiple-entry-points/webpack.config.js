@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        admin: path.join(__dirname, './src/home.js'),
-        application: path.join(__dirname, './src/order.js')
+        home: path.join(__dirname, './src/home.js'),
+        order: path.join(__dirname, './src/order.js')
     },
 
     output:{
