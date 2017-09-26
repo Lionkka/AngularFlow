@@ -6,9 +6,6 @@ import { Component, Input } from '@angular/core';
     styleUrls: [ './time-capsule.component.scss' ]
 })
 export class TimeCapsuleComponent {
+    @Input()
     public timer: number;
-
-    public setTime(value: number): void {
-        this.timer = value;
-    }
 }

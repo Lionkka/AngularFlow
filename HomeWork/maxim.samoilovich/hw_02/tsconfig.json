@@ -8,6 +8,7 @@
     "watch": true
   },
   "files": [
-    "./app.ts"
+    "./app.ts",
+    "./jquery.cookie.d.ts"
   ]
 }

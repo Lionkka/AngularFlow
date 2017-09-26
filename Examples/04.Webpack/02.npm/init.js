@@ -1,3 +1,3 @@
-var $ = require('jquery');
+import * as $ from 'jquery';
 
 $('app').html('hello');

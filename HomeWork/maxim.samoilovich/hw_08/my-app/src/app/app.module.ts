@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { PasswordPipe } from './../pipes/password.pipe';
-import { TranslatePipe } from './../pipes/translator.pipe';
-import { OrderByPipe } from './../pipes/orderby.pipe';
+import { PasswordPipe } from './pipes/password.pipe';
+import { TranslatePipe } from './pipes/translator.pipe';
+import { OrderByPipe } from './pipes/orderby.pipe';
 
 import { AppComponent } from './app.component';
 import { PasswordComponent } from './password/password.component';

@@ -1,0 +1,5 @@
+{
+    "globalDependencies": {
+        "app": "file:./jquery.cookie.d.ts"
+    }
+}

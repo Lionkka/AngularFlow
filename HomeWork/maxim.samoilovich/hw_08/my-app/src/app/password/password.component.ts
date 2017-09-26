@@ -9,14 +9,6 @@ export class PasswordComponent {
     private pass: string = '';
 
     public onInput($e: KeyboardEvent): void {
-        /*if (($e.keyCode >= 48 && $e.keyCode <= 57)
-            || ($e.keyCode >= 65 && $e.keyCode <= 90)
-            || ($e.keyCode >= 96 && $e.keyCode <= 107)
-            || ($e.keyCode >= 188 && $e.keyCode <= 191)
-            || ($e.keyCode >= 219 && $e.keyCode <= 222)
-        ) {
-            this.pass += $e.key;
-        }*/
         if ($e.key.length === 1) {
             this.pass += $e.key;
         }
