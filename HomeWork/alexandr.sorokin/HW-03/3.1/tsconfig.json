@@ -12,6 +12,7 @@
   },
   "files": [
     "./class-decorator.ts",
-    "./method-decorator.ts"
+    "./method-decorator.ts",
+    "./notify-decorator.ts"
   ]
 }
