@@ -10,7 +10,7 @@ function createCircle(radius:number): Circle {
 }
 
 describe('Test circle square method', () => {
-    test('Calculate with radius equal 80. Expect correct calculation.', () => {
+    it('Calculate with radius equal 80. Expect correct calculation.', () => {
         //Arrange
         const radius = 80;
         const expectedResult: number = Math.PI * Math.pow(radius, 2);
@@ -23,7 +23,7 @@ describe('Test circle square method', () => {
         assert.equal(actualResult, expectedResult, 'Wrong calculation in circle square method');
     });
     
-    test('Calculate with radius more than 100. Expect throw exception.', () => {
+    it('Calculate with radius more than 100. Expect throw exception.', () => {
         //Arrange
         const radius = 180;
         const circle:Circle = createCircle(radius);
@@ -34,7 +34,7 @@ describe('Test circle square method', () => {
         }, 'Invalid radius range');
     });
     
-    test('Calculate with radius less than 0. Expect throw exception.', () => {
+    it('Calculate with radius less than 0. Expect throw exception.', () => {
         //Arrange
         const radius = -2;
         const circle:Circle = createCircle(radius);
@@ -47,7 +47,7 @@ describe('Test circle square method', () => {
 });
 
 describe('Test circle length method', () =>{
-    test('Calculate with radius equal 80. Expect correct calculation.', () => {
+    it('Calculate with radius equal 80. Expect correct calculation.', () => {
         //Arrange
         const radius = 80;
         const expectedResult: number = 2 * Math.PI * radius;
@@ -60,7 +60,7 @@ describe('Test circle length method', () =>{
         assert.equal(actualResult, expectedResult, 'Wrong calculation in circle length method');
     });
     
-    test('Calculate with radius more than 100. Expect throw exception.', () => {
+    it('Calculate with radius more than 100. Expect throw exception.', () => {
         //Arrange
         const radius = 120;
         const circle:Circle = createCircle(radius);
@@ -71,7 +71,7 @@ describe('Test circle length method', () =>{
         }, 'Invalid radius range');
     });
     
-    test('Calculate with radius less than 0. Expect throw exception.', () => {
+    it('Calculate with radius less than 0. Expect throw exception.', () => {
         //Arrange
         const radius = -5;
         const circle:Circle = createCircle(radius);

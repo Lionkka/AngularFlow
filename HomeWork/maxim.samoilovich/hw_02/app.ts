@@ -59,6 +59,8 @@ console.log(list.getOne(2));
 
 /* Create d.ts file for jQueryCookie library */
 
+import * as $ from './jquery.cookie.d';
+
 /* Create three asynchronous(special for Anton/Alyona - invoke two async timeout in paralel
     when the first finish run third and when all finish console log 'Done!') timeout request
     to paralel. And When it all done log to console 'DONE!'(Use p) */
