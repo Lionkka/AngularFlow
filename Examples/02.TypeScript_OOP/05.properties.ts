@@ -16,3 +16,7 @@ class ClassWithProperties {
          return this.counter + MyFirstClass.PI;
      }
  }
+
+ const property = new ClassWithProperties();
+console.log(property.counter)
+property.counter = 12;

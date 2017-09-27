@@ -15,3 +15,4 @@ class Vehicle {
 }
 
 Vehicle.wheels
+Vehicle.fly()
