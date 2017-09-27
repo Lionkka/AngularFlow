@@ -58,3 +58,9 @@
 - Implement generic for two way linked list for different items type.
 - Create d.ts file for jQueryCookie library
 - Transpile these files to js and then create bundle with webpack that you have from previous tasks and create webpack config for bundling them to one file.
+
+## Homework Component2 (Group2)##
+- Create parent component tic-tac-toe container
+- Create component tic-tac-toe cell if you click on cell cross appears  if you click twice zero appears
+- Integrates all components together
+  
