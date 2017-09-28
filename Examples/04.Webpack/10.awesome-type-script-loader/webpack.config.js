@@ -9,7 +9,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.js', '.ts']
+        extensions: ['.js','.ts']
     },
     module:{
         loaders:[
@@ -17,7 +17,7 @@ module.exports = {
                         test: /\.ts$/,
                         loader: 'awesome-typescript-loader',
                         query:{
-                            useCache: true
+                            useCache: false
                         }
                     }
             ]

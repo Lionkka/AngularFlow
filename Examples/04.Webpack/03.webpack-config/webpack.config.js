@@ -11,5 +11,5 @@ module.exports = {
     resolve: {
         extensions: ['.js']
     },
-   watch: true
+   watch: false
 };

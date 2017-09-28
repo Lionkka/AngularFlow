@@ -7,11 +7,10 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
   `
 })
 export class ClockComponent {
-    @Output() timeToShow = new EventEmitter<string>();
-    @Input() triggeredTime: string;
+    @Output() public timeToShow: EventEmitter<string> = new EventEmitter<string>();
+    @Input() public triggeredTime: string;
 
-    passTimeToShow(time): void {
+    public passTimeToShow(time: string): void {
         this.timeToShow.emit(time);
     }
 }
-

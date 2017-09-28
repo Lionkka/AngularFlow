@@ -45,3 +45,22 @@
 - Password pipe. Input string output * symbols instead all characters.
 - Create orderBy pipe for ordering numeric and string arrays. Input parameter sort order Asc/Desc.
 - Create translator pipe that will be translate words that contains in the included dictionary. EN -> RU
+
+## Homework 9 ##
+- Given two buttons - Increment and decrement.(3 different component two buttons and one counter title)
+- Given counter - After starting application it disabled. After two seconds after app start it enabled to increase/decrease
+- Counter decrease/increase appear to counter after 1 second delay.
+- Use redux components architecture.
+- Enjoy!
+
+## Homework New (Group2)##
+- Implement Mixin for Disposable, Deletable, Readable {isReadOnly}. Class should contains property value: string. If Dispose it should be equals ''. If delete is should be equals 'deleted'. Id readonly it can't be changed.
+- Implement generic for two way linked list for different items type.
+- Create d.ts file for jQueryCookie library
+- Transpile these files to js and then create bundle with webpack that you have from previous tasks and create webpack config for bundling them to one file.
+
+## Homework Component2 (Group2)##
+- Create parent component tic-tac-toe container
+- Create component tic-tac-toe cell if you click on cell cross appears  if you click twice zero appears
+- Integrates all components together
+  

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.bordered {
+    border: 1px solid #333;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.title {
+    margin-top: .1rem;
+}

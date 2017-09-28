@@ -1,0 +1,33 @@
+.left, .right {
+    float: left;
+    margin-right: 1.5rem;
+}
+.controls {
+    padding: 0 0 1rem;
+}
+.items {
+    min-height: 1.2rem;
+    display: inline-block;
+    padding: 0 1rem;
+    border: 1px dashed grey;
+    span {
+        &:not(:last-child) {
+            &:after {
+                content: ', ';
+                position: relative;
+
+            }
+        }
+    }
+}
+.actions {
+    padding: 1rem 0;
+    button {
+        &:first-letter {
+            text-transform: uppercase;
+        }
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}

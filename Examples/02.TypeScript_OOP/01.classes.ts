@@ -2,7 +2,11 @@ class MyFirstClass {
    static PI: number = 3.14
    count: number;
     
-    constructor(count:number = 10.00){
+    constructor();
+    constructor(count:number);
+    constructor(count:number, count2:number);
+
+    constructor(count:number = 10.00, count2:number = 5 ){
         this.count = count;
     }
 
@@ -11,5 +15,6 @@ class MyFirstClass {
     }
 }
 
-const myClassInstance = new MyFirstClass(12.00);
+const a  = new MyFirstClass()
+const myClassInstance = new MyFirstClass(12,34);
 myClassInstance.getTotalCount();

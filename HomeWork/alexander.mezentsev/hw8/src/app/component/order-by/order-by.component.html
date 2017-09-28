@@ -1,0 +1,46 @@
+<div class="form-horizontal">
+  <div class="form-group">
+    <h3>Original string arr</h3>
+    <ul>
+      <li *ngFor="let val of stringArr">{{val}}</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <h3>Translated Original string arr</h3>
+    <ul>
+      <li *ngFor="let val of stringArr">{{val | translate}}</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <h3>Sorted string arr</h3>
+    <ul>
+      <li *ngFor="let val of stringArr | orderby">{{val}}</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <h3>Sorted (descending) string arr</h3>
+    <ul>
+      <li *ngFor="let val of stringArr | orderby:true">{{val}}</li>
+    </ul>
+  </div>
+</div>
+<div class="form-horizontal">
+  <div class="form-group">
+    <h3>Original number arr</h3>
+    <ul>
+      <li *ngFor="let val of numberArr">{{val}}</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <h3>Sorted number arr</h3>
+    <ul>
+      <li *ngFor="let val of numberArr | orderby">{{val}}</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <h3>Sorted (descending) number arr</h3>
+    <ul>
+      <li *ngFor="let val of numberArr | orderby:true">{{val}}</li>
+    </ul>
+  </div>
+</div>

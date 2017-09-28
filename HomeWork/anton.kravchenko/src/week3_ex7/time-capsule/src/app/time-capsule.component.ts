@@ -7,11 +7,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `
 })
 export class TimeCapsuleComponent {
-  @Input() timeToShow;
-  @Output() triggerTime = new EventEmitter<string>();
+  @Input() public timeToShow: string;
+  @Output() public triggerTime: EventEmitter<string> = new EventEmitter<string>();
 
-  passTriggerTime(): void {
+  public passTriggerTime(): void {
     this.triggerTime.emit(this.timeToShow);
   }
 }
-

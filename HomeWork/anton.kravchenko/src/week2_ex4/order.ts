@@ -24,7 +24,7 @@ class Order {
     }
 
     public asyncCountTotal(tax: number): Promise<number>  {
-        return new Promise<number>((resolve) => setTimeout(resolve(this.countTotal(tax), 2000));
+        return new Promise<number>((resolve) => setTimeout(() => resolve(this.countTotal(tax)), 2000));
     }
 }
 
