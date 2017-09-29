@@ -9,14 +9,17 @@ function g() {
     console.log("g(): evaluated");
     return function (target:any, propertyKey: string, descriptor: PropertyDescriptor) {
         console.log("g(): called");
+        console.log(target);
+        console.log(propertyKey);
     }
 }
 
 class C {
+
     @g()
-    @f()
     method() {
         console.log('Method called');
+        return 'Method called'
     }
 }
 

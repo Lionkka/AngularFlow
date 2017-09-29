@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { MyComponent } from './my-first.component';
 import { ChildComponent } from './child.component';
+import { LifeComponent } from './life.component';
 
 
 @NgModule({
   declarations: [
-    MyComponent, ChildComponent
+    MyComponent, ChildComponent, LifeComponent
   ],
   imports: [
     BrowserModule, FormsModule
