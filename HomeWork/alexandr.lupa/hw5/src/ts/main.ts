@@ -1,5 +1,5 @@
 if (!ENV_PRODUCTION) {
-  $('.page-header h1').append(` <small>${version}</small>`)
+  $('.page-header h1').append(` <small>${version}</small>`);
 }
 
 const validationOptions: JQueryValidation.ValidationOptions = {
@@ -21,7 +21,7 @@ const validationOptions: JQueryValidation.ValidationOptions = {
     email: 'Please enter a valid email address'
   },
   errorElement: 'em',
-  errorPlacement(error: JQuery<HTMLElement>, element: JQuery<HTMLElement>) {
+  errorPlacement(error: JQuery<HTMLElement>, element: JQuery<HTMLElement>): void {
     error.addClass('help-block');
 
     if (element.prop('type') === 'checkbox') {
@@ -30,13 +30,13 @@ const validationOptions: JQueryValidation.ValidationOptions = {
       error.insertAfter(element.closest('.input-group'));
     }
   },
-  highlight(element: HTMLElement, errorClass: string, validClass: string) {
+  highlight(element: HTMLElement, errorClass: string, validClass: string): void {
     $(element).closest('.form-group').addClass('has-error').removeClass('has-success');
   },
-  unhighlight(element: HTMLElement, errorClass: string, validClass: string) {
+  unhighlight(element: HTMLElement, errorClass: string, validClass: string): void {
     $(element).closest('.form-group').addClass('has-success').removeClass('has-error');
   },
-  submitHandler(form: HTMLFormElement, event: JQueryEventObject | undefined) {
+  submitHandler(form: HTMLFormElement, event: JQueryEventObject | undefined): void {
     form.reset();
     $('#modal').modal();
   }

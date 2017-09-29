@@ -1,0 +1,14 @@
+<div class="input-group">
+  <input class="form-control" type="number" [value]="step" (input)="change($event.target.value)" />
+
+  <div class="input-group-btn">
+    <button class="btn btn-default" type="button" (click)="decrease()">
+      <span class="glyphicon glyphicon-minus"></span>
+    </button>
+
+    <button class="btn btn-default" type="button" (click)="increase()">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+  </div>
+</div>
+
